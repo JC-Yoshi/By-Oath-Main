@@ -303,7 +303,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3eee013d9d999cd4f9b6f1b4be8e0097, type: 2}
+  - {fileID: 2100000, guid: 6ed8b9bed1e71df45a8713316a3c0e43, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1036,7 +1036,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f197a269f9ce7a4ba23f478f1553f98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 1127492817}
   attackPoint: {fileID: 1044680544}
   attackRange: 0.86
   enemyLayers:
@@ -1083,9 +1082,9 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1127492810}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 42ae042e6a7dd754089e825b56c333ac, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

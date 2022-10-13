@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerCombat : MonoBehaviour
 {
-    public Animator animator;
+  //  public Animator animator;
 
     public Transform attackPoint; // The point from which the wepons range is calculated
     public float attackRange = 0.5f;// the range the wepon can attack up to
@@ -44,7 +44,7 @@ public class PlayerCombat : MonoBehaviour
     void Attack()// the attack function 
     {
         //play the attack animation, to be fully implemented once animator is ready
-         animator.SetTrigger("Attack"); // name of the trigger will go in the brakets
+        // animator.SetTrigger("Attack"); // name of the trigger will go in the brakets
 
 
         //detect enemies in range
