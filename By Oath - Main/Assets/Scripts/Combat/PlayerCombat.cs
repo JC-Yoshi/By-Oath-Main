@@ -101,11 +101,11 @@ public class PlayerCombat : MonoBehaviour
     }
 
    public void Reload()
-    {
+   {
 
         Debug.Log("Reloaded");
         amoCount = amoCountMax;
-    }
+   }
 
     private void OnDrawGizmosSelected()
     {

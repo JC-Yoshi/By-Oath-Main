@@ -12,14 +12,17 @@ public class ReloadPoint : MonoBehaviour, IInteractable
    [ SerializeField] private string prompt;
 
     public string InteractionPrompt => prompt;
+    
+
 
     public bool Interact(Interactor interactor)
     {
 
         Debug.Log("reloading");
 
-       playerCombat = gameObject.GetComponent<PlayerCombat>();
+        //playerCombat = gameObject.GetComponent<PlayerCombat>();
 
+        playerCombat = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerCombat>();
         playerCombat.Reload();
 
         return true;
