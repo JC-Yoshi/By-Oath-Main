@@ -18,9 +18,9 @@ public class ReloadPoint : MonoBehaviour, IInteractable
 
         Debug.Log("reloading");
 
-       playerCombat = gameObject.GetComponent<PlayerCombat>(); 
+       playerCombat = gameObject.GetComponent<PlayerCombat>();
 
-       playerCombat.Reload();
+        playerCombat.Reload();
 
         return true;
 

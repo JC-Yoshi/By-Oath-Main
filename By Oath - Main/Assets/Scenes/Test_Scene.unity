@@ -1037,11 +1037,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackPoint: {fileID: 1044680544}
-  attackRange: 0.86
+  mainAttackRange: 0.5
+  seccondAttackRange: 1.75
   enemyLayers:
     serializedVersion: 2
     m_Bits: 192
-  attackDamage: 1
+  mainAttackDamage: 1
+  seccondAttackDamage: 10
   amoCountMax: 5
 --- !u!114 &1127492815
 MonoBehaviour:
