@@ -8,11 +8,11 @@ public class PlayerCombat : MonoBehaviour
 
     public Transform attackPoint; // The point from which the wepons range is calculated
     public float mainAttackRange = 0.5f;// the range the wepon can attack up to
-    public float seccondAttackRange = 1.75f;
+    public float seccondAttackRange = 1.75f;//seccondary attacks range
     public LayerMask enemyLayers;// defines what an enemy is
 
     public int mainAttackDamage = 1;// the players damage
-    public int seccondAttackDamage = 10;
+    public int seccondAttackDamage = 10;//seccondarys attack damage
     public int amoCountMax = 5; //players amo count 
     int amoCount = 0;
 
@@ -35,26 +35,19 @@ public class PlayerCombat : MonoBehaviour
             Debug.Log("Out of amo");  //will play a ui element telling the player to reload
         }
 
-        if (Input.GetKeyDown(KeyCode.Mouse1))
+        if (Input.GetKeyDown(KeyCode.Mouse1))//secondary attack
         {
-            if ( amoCount == amoCountMax)
+            if (amoCount == amoCountMax)//only attacks if player has max ammo
             {
                 SecondAttack();
             }
             else
-                MainAttack();
+                Debug.Log("Not enough ammo to powwer attack");//will play a ui element telling the player they dont have enough ammo
 
-        }
-        
-      //  if(Input.GetKeyDown(KeyCode.E))//temp reload mechanic until reload points are completed
-       // {
-       //     Reload();
-      //  }
-
-
+        }      
     }
 
-    void MainAttack()// the attack function 
+    void MainAttack()// the mainAttack function 
     {
         //play the attack animation, to be fully implemented once animator is ready
         // animator.SetTrigger("Attack"); // name of the trigger will go in the brakets
@@ -77,7 +70,7 @@ public class PlayerCombat : MonoBehaviour
         }
     }
 
-    void SecondAttack()
+    void SecondAttack()//seccondary attack, right mouse click
     {
         //play the attack animation, to be fully implemented once animator is ready
         // animator.SetTrigger("Attack"); // name of the trigger will go in the brakets
@@ -103,18 +96,18 @@ public class PlayerCombat : MonoBehaviour
    public void Reload()
    {
 
-        Debug.Log("Reloaded");
-        amoCount = amoCountMax;
+        Debug.Log("Reloaded");//logs a reload
+        amoCount = amoCountMax;//sets current amo = to max amo
    }
 
-    private void OnDrawGizmosSelected()
+    private void OnDrawGizmosSelected()//draws the main attacks range
     {
         
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(attackPoint.position, mainAttackRange);
     }
 
-    private void OnDrawGizmos()
+    private void OnDrawGizmos()//draws the seccondary attacks range
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(attackPoint.position , seccondAttackRange);

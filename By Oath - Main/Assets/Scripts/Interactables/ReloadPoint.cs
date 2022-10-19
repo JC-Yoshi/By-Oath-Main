@@ -22,8 +22,8 @@ public class ReloadPoint : MonoBehaviour, IInteractable
 
         //playerCombat = gameObject.GetComponent<PlayerCombat>();
 
-        playerCombat = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerCombat>();
-        playerCombat.Reload();
+        playerCombat = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerCombat>();//allows this script to accsess the playerCombat script
+        playerCombat.Reload();//calls reload
 
         return true;
 
