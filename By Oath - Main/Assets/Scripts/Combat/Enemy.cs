@@ -77,7 +77,7 @@ public class Enemy : MonoBehaviour
         this.enabled = false;
     }
 
-    private void OnDrawGizmosSelected()//draws the attacik range
+    private void OnDrawGizmosSelected()//draws the attack range
     {
 
         Gizmos.color = Color.yellow;

@@ -70,6 +70,7 @@ public class PlayerCombat : MonoBehaviour
             Debug.Log("Hit" + enemy.name);
 
             enemy.GetComponent<Enemy>().EnemyTakeDamage(mainAttackDamage);//calls the enemy script and allows damage to be done 
+           
         }
     }
 
@@ -93,6 +94,7 @@ public class PlayerCombat : MonoBehaviour
             Debug.Log("Hit" + enemy.name);
 
             enemy.GetComponent<Enemy>().EnemyTakeDamage(seccondAttackDamage);//calls the enemy script and allows damage to be done 
+          
         }
     }
 
@@ -118,8 +120,8 @@ public class PlayerCombat : MonoBehaviour
     void PlayerDie()//die function 
     {
         Debug.Log("player is dead");
-        //death animation
-        Application.Quit(); 
+        //death animation??
+        
         //Play death screen       
     }
 
