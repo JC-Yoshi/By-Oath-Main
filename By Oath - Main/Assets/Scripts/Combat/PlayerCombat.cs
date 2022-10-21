@@ -14,11 +14,14 @@ public class PlayerCombat : MonoBehaviour
     public int mainAttackDamage = 1;// the players damage
     public int seccondAttackDamage = 10;//seccondarys attack damage
     public int amoCountMax = 5; //players amo count 
-    int amoCount = 0;
+    int amoCount = 0;//keeps track of the players current ammo count
+    public int maxHealth = 15;//max health the player can have 
+    int currentHealth = 1;//the players current health
 
     private void Start()
     {
         amoCount = amoCountMax;
+        currentHealth = maxHealth;
     }
 
     // Update is called once per frame
@@ -66,7 +69,7 @@ public class PlayerCombat : MonoBehaviour
             //damage the enemies
             Debug.Log("Hit" + enemy.name);
 
-            enemy.GetComponent<Enemy>().TakeDamage(mainAttackDamage);//calls the enemy script and allows damage to be done 
+            enemy.GetComponent<Enemy>().EnemyTakeDamage(mainAttackDamage);//calls the enemy script and allows damage to be done 
         }
     }
 
@@ -89,7 +92,7 @@ public class PlayerCombat : MonoBehaviour
             //damage the enemies
             Debug.Log("Hit" + enemy.name);
 
-            enemy.GetComponent<Enemy>().TakeDamage(seccondAttackDamage);//calls the enemy script and allows damage to be done 
+            enemy.GetComponent<Enemy>().EnemyTakeDamage(seccondAttackDamage);//calls the enemy script and allows damage to be done 
         }
     }
 
@@ -100,7 +103,28 @@ public class PlayerCombat : MonoBehaviour
         amoCount = amoCountMax;//sets current amo = to max amo
    }
 
-    private void OnDrawGizmosSelected()//draws the main attacks range
+    public void PlayerTakeDamage(int Damage)
+    {
+        currentHealth -= Damage;// current health - damage of enemy
+
+        //play the damaged animation if there is one
+
+        if (currentHealth <= 0)//if health is less then or equal to 0 call die
+        {
+            PlayerDie();
+        }
+    }
+
+    void PlayerDie()//die function 
+    {
+        Debug.Log("player is dead");
+        //death animation
+        Application.Quit(); 
+        //Play death screen       
+    }
+
+
+private void OnDrawGizmosSelected()//draws the main attacks range
     {
         
         Gizmos.color = Color.yellow;
