@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Tag_Reload
   layers:
   - Default
   - TransparentFX
@@ -11,11 +12,11 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
+  - RollieBois
+  - SkyGuys
   - PostProcessing
   - Not in Reflection
-  - 
+  - whatisGround
   - 
   - 
   - 
