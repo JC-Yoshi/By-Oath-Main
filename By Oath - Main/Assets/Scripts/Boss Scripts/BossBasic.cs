@@ -41,8 +41,6 @@ public class BossBasic : MonoBehaviour
     void BossDie()
     {
         Debug.Log("Boss is dead");
-
-
     }
 
 
