@@ -1,76 +1,106 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class Bullet : MonoBehaviour
 {
-    PlayerCombat playerCombat;
+    PlayerCombat playerCombat;//refference to playerCombat script
 
-    private Transform target;//the bullets target 
+    BossBasic bossBasic;//refference to the bossBasic cript
+   
+    [SerializeField]
+    NavMeshAgent navMeshAgent;
+
+
     public int attackDamage = 4;//the bullets damage 
-    public float speed = 80f;//the bullets speed
-   // public Transform bulletPosition;
-  //  public float hitRange = 0.5f;
-  //  public LayerMask obstical;
+    public float hitRange = 0.5f;//the bullets hit range
+    public LayerMask Player;//the layer mask that the player is in 
+    public Transform bulletPosition; // the bullets current position
+    float timeAlive = 0f;
 
-    public float shootingTime = 5f;//how long the bullet stays alive 
-    
-    float currentTime;
+    float attackRate = 3f;//the rate the "bullets" attack
+    float nextAttackTime = 0f;//there next attack time 
+
+
 
     private void Start()
-    {
-       currentTime = Time.time;
-    }
-    public void Seek(Transform Target)
-    {
-        target = Target;//allows it to inherit its target from the boss 
-    }
+    {             
+        if (navMeshAgent == null)//checks to see if theres a nav mesh
+        {
+            Debug.Log("no connected navmesh to" + gameObject.name);
+        }
+       
 
-    // Update is called once per frame
-    void Update()
-    {
-        this.gameObject.GetComponent<Timer>();
+        bossBasic = GameObject.FindGameObjectWithTag("Boss").GetComponent<BossBasic>();//gives acces to the bossBasic script
+            
+        timeAlive = bossBasic.fireTime; //makes the time alive == to the fire time 
         
-        if (target == null)//if theres no target it will destroy the target 
-        {
-            Destroy(gameObject);
-            return;
-        }
-        if (currentTime >= shootingTime)//if the bullets been alive for to long it'll despawn 
-        {
-            Debug.Log("Bullet has despawned");
-
-            Destroy(gameObject);
-            return;
-        }
-
-        Vector3 direction = target.position - transform.position;//gives the bullet the direction 
-        float distanceThisFrame = speed * Time.deltaTime;//calculates how far to travel 
-
-        if (direction.magnitude <= distanceThisFrame)//calculates if the target is hit 
-        {
-
-            HitTarget();//runs hit target
-            Destroy(gameObject);//destroys the bullet
-            return;//leaves 
-        }
-        /*if(Physics.OverlapSphere(bulletPosition.position, hitRange , obstical) )//if it colliders with an obstical destroy it 
-        {
-            Destroy(gameObject);
-            return;
-        }*/
-
-        transform.Translate(direction.normalized * distanceThisFrame, Space.World);//calculates were to travel 
 
     }
 
-    void HitTarget()
+    public void SetDestination(Transform destination)//the set destination function
     {
-        Debug.Log("Hit target");
-
-        playerCombat = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerCombat>();//allows this script to accsess the playerCombat script
-        playerCombat.PlayerTakeDamage(attackDamage);//deals damage 
+        if (destination != null)//if the destination isn't null
+        {
+            Vector3 targetVector3 = destination.transform.position;//gets the destination and marks the position
+            navMeshAgent.SetDestination(targetVector3);//sets the new vec3 as the target destination 
+        }
+        else
+        {
+            Debug.Log("The Set Destination is broken");//thoughs debug if it cant find a destination 
+        }
     }
 
+    private void Update()
+    {
+
+        if (Time.time >= nextAttackTime)//if enough time has passed then the enemy can attack
+        {
+            Damage();
+            nextAttackTime = Time.time + 1f / attackRate;//once attacked 1/attackrate is how long till the next attack
+        }
+
+        if (Time.time >= timeAlive)//if the time the bullets have been "alive" is equal to the boss total fireing time then destroy all bullets
+        {
+            Die();   
+        }
+    }
+
+    void Damage()//dealing damage to the player 
+    {
+        Collider[] hitPlayer = Physics.OverlapSphere(bulletPosition.position, hitRange, Player);//detects if contact is made and stores in array 
+
+        foreach (Collider player in hitPlayer)//go's though the array 
+        {
+            //damage the Player
+            Debug.Log("Hit" + player.name);
+
+            
+            playerCombat = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerCombat>();//allows this script to accsess the playerCombat script
+            playerCombat.PlayerTakeDamage(attackDamage);//calls the players take damage function 
+
+        }
+    }
+
+    void Die()//destroyes the bullet 
+    {
+
+        Debug.Log("Bullet destroyed");//debug log for inital testing 
+        GetComponent<Bullet>().enabled = false;//disables the bullet script
+        Destroy(gameObject);//destroyes the game object
+
+       
+        return;
+
+
+    }
+
+    private void OnDrawGizmosSelected()//draws the HitBox range
+    {
+
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(bulletPosition.position, hitRange);
+    }
 
 }

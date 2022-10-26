@@ -4,12 +4,19 @@ using UnityEngine;
 
 public class PlayerCombat : MonoBehaviour
 {
-  //  public Animator animator;
+    Enemy myEnemy;
+    BossBasic bossBasic;
+
+
+
+
+    //  public Animator animator;
 
     public Transform attackPoint; // The point from which the wepons range is calculated
     public float mainAttackRange = 0.5f;// the range the wepon can attack up to
     public float seccondAttackRange = 1.75f;//seccondary attacks range
     public LayerMask enemyLayers;// defines what an enemy is
+    public LayerMask bossLayer;//defines the boss
 
     public int mainAttackDamage = 1;// the players damage
     public int seccondAttackDamage = 10;//seccondarys attack damage
@@ -33,9 +40,9 @@ public class PlayerCombat : MonoBehaviour
             if (amoCount >= 0)
             {
                 MainAttack();
-            } 
+            }
             else
-            Debug.Log("Out of amo");  //will play a ui element telling the player to reload
+                Debug.Log("Out of amo");  //will play a ui element telling the player to reload
         }
 
         if (Input.GetKeyDown(KeyCode.Mouse1))//secondary attack
@@ -47,7 +54,7 @@ public class PlayerCombat : MonoBehaviour
             else
                 Debug.Log("Not enough ammo to powwer attack");//will play a ui element telling the player they dont have enough ammo
 
-        }      
+        }
     }
 
     void MainAttack()// the mainAttack function 
@@ -69,9 +76,18 @@ public class PlayerCombat : MonoBehaviour
             //damage the enemies
             Debug.Log("Hit" + enemy.name);
 
-            enemy.GetComponent<Enemy>().EnemyTakeDamage(mainAttackDamage);//calls the enemy script and allows damage to be done 
-           
+            enemy.GetComponent<Enemy>().EnemyTakeDamage(mainAttackDamage);//calls the enemy script and allows damage to be done   
         }
+
+
+        Collider[] hitBoss = Physics.OverlapSphere(attackPoint.position,mainAttackRange, bossLayer);//detects any hit bosses
+
+        foreach ( Collider boss in hitBoss)//loops over hit bosses
+        {
+            Debug.Log("Hit" + boss.name);
+            boss.GetComponent<BossBasic>().BossTakeDamage(mainAttackDamage);//damages the boss
+        }
+
     }
 
     void SecondAttack()//seccondary attack, right mouse click
@@ -88,22 +104,32 @@ public class PlayerCombat : MonoBehaviour
 
 
         //damage them
-        foreach (Collider enemy in hitEnemies)
+        foreach (Collider enemy in hitEnemies)//loops over hit enemys
         {
             //damage the enemies
             Debug.Log("Hit" + enemy.name);
 
             enemy.GetComponent<Enemy>().EnemyTakeDamage(seccondAttackDamage);//calls the enemy script and allows damage to be done 
-          
+        }
+
+        Collider[] hitBoss = Physics.OverlapSphere(attackPoint.position, seccondAttackRange, bossLayer);//detects any hit bosses
+
+
+        //damage them
+        foreach (Collider boss in hitBoss)//loops over hit bosses
+        {
+            //damage the enemies
+            Debug.Log("Hit" + boss.name);
+            boss.GetComponent<BossBasic>().BossTakeDamage(seccondAttackDamage);//damages the boss
         }
     }
 
-   public void Reload()
-   {
+    public void Reload()
+    {
 
         Debug.Log("Reloaded");//logs a reload
         amoCount = amoCountMax;//sets current amo = to max amo
-   }
+    }
 
     public void PlayerTakeDamage(int Damage)
     {
@@ -121,14 +147,14 @@ public class PlayerCombat : MonoBehaviour
     {
         Debug.Log("player is dead");
         //death animation??
-        
+
         //Play death screen       
     }
 
 
-private void OnDrawGizmosSelected()//draws the main attacks range
+    private void OnDrawGizmosSelected()//draws the main attacks range
     {
-        
+
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(attackPoint.position, mainAttackRange);
     }
@@ -136,6 +162,6 @@ private void OnDrawGizmosSelected()//draws the main attacks range
     private void OnDrawGizmos()//draws the seccondary attacks range
     {
         Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(attackPoint.position , seccondAttackRange);
+        Gizmos.DrawWireSphere(attackPoint.position, seccondAttackRange);
     }
 }

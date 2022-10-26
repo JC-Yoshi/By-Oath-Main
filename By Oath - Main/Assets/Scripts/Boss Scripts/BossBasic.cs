@@ -12,6 +12,8 @@ public class BossBasic : MonoBehaviour
     int bossCurrentHealth;//The boss's vurrent health
     float fireCountDown = 0f;//the cool down on shooting 
 
+    public float fireTime;//total time the boss fires for
+
     public GameObject bulletPrefab;
     public Transform firePoint;
 
@@ -24,28 +26,32 @@ public class BossBasic : MonoBehaviour
     private void Update()
     {
         FaceTarget();//runs the face target script
-
-        if (fireCountDown<=0)//checks the the cool down is 0 and then it can shoot
+        if (Time.time < fireTime)
         {
-            Shoot();//runs shoot
-            fireCountDown = 1f / fireRate; //sets new countdown 
+            if (fireCountDown <= 0)//checks the the cool down is 0 and then it can shoot
+            {
+                Shoot();//runs shoot
+                fireCountDown = 1f / fireRate; //sets new countdown 
+            }
+            fireCountDown -= Time.deltaTime;//starts counting down 
+
         }
-         fireCountDown -= Time.deltaTime;//starts counting down 
 
     }
 
     void Shoot()//shoots
     {
-        Debug.Log("The Boss is shooting");//debug log to say that the boss is shooting 
-        GameObject bulletG0 = (GameObject) Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
 
-        Bullet bullet = bulletG0.GetComponent<Bullet>(); 
+
+      //  Debug.Log("The Boss is shooting");//debug log to say that the boss is shooting 
+        GameObject bulletG0 = (GameObject)Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+
+        Bullet bullet = bulletG0.GetComponent<Bullet>();
 
         if (bullet != null)
         {
-            bullet.Seek(target);
+            bullet.SetDestination(target);
         }
-
 
     }
     void FaceTarget()//does math magic so that the boss is allways faceing the player 
@@ -55,10 +61,10 @@ public class BossBasic : MonoBehaviour
         transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 5);
     }
 
-    public void EnemyTakeDamage(int Damage)
+    public void BossTakeDamage(int Damage)
     {
         bossCurrentHealth -= Damage;// current health - damage of player
-
+        Debug.Log("Boss taking damage");
         //play the damaged animation if there is one
 
         if (bossCurrentHealth <= 0)//if health is less then or equal to 0 call die
@@ -70,6 +76,12 @@ public class BossBasic : MonoBehaviour
     void BossDie()
     {
         Debug.Log("Boss is dead");
+
+        GetComponent<BossBasic>().enabled = false;  
+        Destroy(gameObject);
+        return; 
+
+        //trigger win screen 
     }
 
 
