@@ -13,23 +13,37 @@ public class CrossScript : MonoBehaviour, IInteractable
 
     public bool Interact(Interactor interactor)
     {
-        Debug.Log("collecing cross");
+        Debug.Log("collecing cross");//debug check log
 
-        inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
+        inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();//accses the inventory script
+
+        //runs checks for crosses as the player works there way though collecting them, triggering the next wave as they go 
         if (inventory.cross1 == false)
         {
-            inventory.cross1 = true;
-            inventory.CrossPickup1();
+            inventory.cross1 = true;//makes cross1 be collected 
+            inventory.CrossPickup1();//runs the pickup function, which triggers the UI changes and next wave spawn 
+
+
+            GetComponent<CrossScript>().enabled = false;//disables the crossScript
+                this.gameObject.SetActive(false);  //disables the game object
+                Destroy(gameObject);//destroys the game object  
             return true;
         }
 
-
+        //Above coments are repeted for each method 
         if (inventory.cross1 == true)
         {
             if (inventory.cross2 == false)
             {
                 inventory.cross2 = true;
                 inventory.CrossPickup2();
+
+                GetComponent<CrossScript>().enabled = false;
+                this.gameObject.SetActive(false);
+                Destroy(gameObject);
+
+             
+
                 return true;
             }
         }
@@ -42,6 +56,14 @@ public class CrossScript : MonoBehaviour, IInteractable
                 {
                     inventory.cross3 = true;
                     inventory.CrossPickup3();
+
+                    GetComponent<CrossScript>().enabled = false;
+                    this.gameObject.SetActive(false);
+                    Destroy(gameObject);
+
+                 
+
+                    return true;
                 }
             }
         }

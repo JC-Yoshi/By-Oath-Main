@@ -23,16 +23,32 @@ public class Inventory : MonoBehaviour
     {
         bool cross1 = true;
         Debug.Log("picked up cross 1");
+        if(cross1 == true)
+        {
+            //change UI
+            //trigger next wave spawn
+        }
     }
     public void CrossPickup2()
     {
         bool cross2 = true;
         Debug.Log("picked up cross 2");
+        if(cross2 ==true)
+        {
+            //change UI
+            //trigger next wave spawn
+        }
     }
     public void CrossPickup3()
     {
         bool cross3 = true;
         Debug.Log("picked up cross 3");
+
+        if (cross3 == true)
+        {
+            //change UI
+            //trigger next wave spawn
+        }
 
     }
 
