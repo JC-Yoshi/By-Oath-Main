@@ -26,6 +26,8 @@ public class EnemyMove : MonoBehaviour
         {
             SetDestination();//runs the method
         }
+
+        
     }
 
     private void SetDestination()//this sets the destination for the agent 
