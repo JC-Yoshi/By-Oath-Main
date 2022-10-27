@@ -28,10 +28,10 @@ public class PlayerCombat : MonoBehaviour
 
     private void Start()
     {
-        holyMeter = GameObject.FindGameObjectWithTag("Player").GetComponent<HolyMeter>();
+        holyMeter = GameObject.FindGameObjectWithTag("Player").GetComponent<HolyMeter>();//calling UI scripts
         holyMeter.SetMaxWater(amoCountMax);
 
-        healthBar = GameObject.FindGameObjectWithTag("Player").GetComponent<HealthBar>();
+        healthBar = GameObject.FindGameObjectWithTag("Player").GetComponent<HealthBar>();//calling UI scripts
         healthBar.SetMaxHealth(maxHealth);  
 
         amoCount = amoCountMax;
@@ -87,7 +87,7 @@ public class PlayerCombat : MonoBehaviour
 
             enemy.GetComponent<Enemy>().EnemyTakeDamage(mainAttackDamage);//calls the enemy script and allows damage to be done   
 
-            holyMeter = GameObject.FindGameObjectWithTag("Player").GetComponent<HolyMeter>();
+            holyMeter = GameObject.FindGameObjectWithTag("Player").GetComponent<HolyMeter>();//calling UI scripts
             holyMeter.SetWater(amoCount);
         }
 
@@ -98,7 +98,8 @@ public class PlayerCombat : MonoBehaviour
         {
             Debug.Log("Hit" + boss.name);
             boss.GetComponent<BossBasic>().BossTakeDamage(mainAttackDamage);//damages the boss
-            holyMeter = GameObject.FindGameObjectWithTag("Player").GetComponent<HolyMeter>();
+
+            holyMeter = GameObject.FindGameObjectWithTag("Player").GetComponent<HolyMeter>();//calling UI scripts
             holyMeter.SetWater(amoCount);
         }
 
@@ -125,7 +126,7 @@ public class PlayerCombat : MonoBehaviour
 
             enemy.GetComponent<Enemy>().EnemyTakeDamage(seccondAttackDamage);//calls the enemy script and allows damage to be done 
 
-            holyMeter = GameObject.FindGameObjectWithTag("Player").GetComponent<HolyMeter>();
+            holyMeter = GameObject.FindGameObjectWithTag("Player").GetComponent<HolyMeter>();//calling UI scripts
             holyMeter.SetWater(0);
         }
 
@@ -139,7 +140,7 @@ public class PlayerCombat : MonoBehaviour
             Debug.Log("Hit" + boss.name);
             boss.GetComponent<BossBasic>().BossTakeDamage(seccondAttackDamage);//damages the boss
 
-            holyMeter = GameObject.FindGameObjectWithTag("Player").GetComponent<HolyMeter>();
+            holyMeter = GameObject.FindGameObjectWithTag("Player").GetComponent<HolyMeter>();//calling UI scripts
             holyMeter.SetWater(0);
         }
     }
@@ -149,6 +150,10 @@ public class PlayerCombat : MonoBehaviour
 
         Debug.Log("Reloaded");//logs a reload
         amoCount = amoCountMax;//sets current amo = to max amo
+
+
+
+
     }
 
     public void PlayerTakeDamage(int Damage)
@@ -157,7 +162,7 @@ public class PlayerCombat : MonoBehaviour
 
         //play the damaged animation if there is one
 
-        healthBar = GameObject.FindGameObjectWithTag("Player").GetComponent<HealthBar>();
+        healthBar = GameObject.FindGameObjectWithTag("Player").GetComponent<HealthBar>();//calling UI scripts
         healthBar.SetHealth(currentHealth);
 
 
