@@ -9,7 +9,7 @@ public class HudPlayer : MonoBehaviour
 
     //int maxHealth = 15;//playerCombat.maxHealth;
  //   int currentHealth;
-  //  public HealthBar healthBar;
+   // public HealthBar healthBar;
 
   //  int currentAmo;
   //  int maxAmo = 5 ;//playerCombat.amoCountMax;

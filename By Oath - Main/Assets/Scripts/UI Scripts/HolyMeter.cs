@@ -9,20 +9,20 @@ public class HolyMeter : MonoBehaviour
     public Gradient gradient;
     public Image fill;
 
-    public void SetMaxWater(int water)
+    public void SetMaxWater(int amoCount)
     {
         {
-            slider.maxValue = water;
-            slider.value = water;
+            slider.maxValue = amoCount;
+            slider.value = amoCount;
 
             fill.color = gradient.Evaluate(1f);
         }
     }
 
-    public void SetWater(int water)
+    public void SetWater(int amoCount)
     {
         {
-            slider.value = water;
+            slider.value = amoCount;
             fill.color = gradient.Evaluate(slider.normalizedValue);
         }
     }
