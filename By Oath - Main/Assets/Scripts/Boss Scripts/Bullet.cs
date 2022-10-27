@@ -86,7 +86,7 @@ public class Bullet : MonoBehaviour
     void Die()//destroyes the bullet 
     {
 
-        Debug.Log("Bullet destroyed");//debug log for inital testing 
+      //  Debug.Log("Bullet destroyed");//debug log for inital testing 
         GetComponent<Bullet>().enabled = false;//disables the bullet script
         Destroy(gameObject);//destroyes the game object
 
