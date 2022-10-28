@@ -19,7 +19,7 @@ public class Bullet : MonoBehaviour
     public Transform bulletPosition; // the bullets current position
     float timeAlive = 0f;
 
-    float attackRate = 3f;//the rate the "bullets" attack
+    float attackRate =3f;//the rate the "bullets" attack
     float nextAttackTime = 0f;//there next attack time 
 
 
