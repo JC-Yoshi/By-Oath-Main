@@ -25,9 +25,7 @@ public class CrossScript : MonoBehaviour, IInteractable
         {
             inventory.cross1 = true;//makes cross1 be collected 
             inventory.CrossPickup1();//runs the pickup function, which triggers the UI changes and next wave spawn 
-
-           // GameObject.FindGameObjectWithTag("Cross1").SetActive(true);
-            
+     
 
             GetComponent<CrossScript>().enabled = false;//disables the crossScript
                 this.gameObject.SetActive(false);  //disables the game object
@@ -35,7 +33,7 @@ public class CrossScript : MonoBehaviour, IInteractable
             return true;
         }
 
-        //Above coments are repeted for each method 
+        //Above coments are repeted for each method below
         if (inventory.cross1 == true)
         {
             if (inventory.cross2 == false)
@@ -43,13 +41,10 @@ public class CrossScript : MonoBehaviour, IInteractable
                 inventory.cross2 = true;
                 inventory.CrossPickup2();
 
-              //  GameObject.FindGameObjectWithTag("Cross2").SetActive(true);
 
                 GetComponent<CrossScript>().enabled = false;
                 this.gameObject.SetActive(false);
-                Destroy(gameObject);
-
-             
+                Destroy(gameObject); 
 
                 return true;
             }
@@ -64,13 +59,9 @@ public class CrossScript : MonoBehaviour, IInteractable
                     inventory.cross3 = true;
                     inventory.CrossPickup3();
 
-                   // GameObject.FindGameObjectWithTag("Cross3").SetActive(true);
-
                     GetComponent<CrossScript>().enabled = false;
                     this.gameObject.SetActive(false);
-                    Destroy(gameObject);
-
-                 
+                    Destroy(gameObject); 
 
                     return true;
                 }
