@@ -1680,7 +1680,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6683106779675788360, guid: 7aed57d7b21d46348a48336775272ffa, type: 3}
       propertyPath: bossMaxHealth
-      value: 3
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 6683106779675788367, guid: 7aed57d7b21d46348a48336775272ffa, type: 3}
       propertyPath: m_Name
@@ -1810,6 +1810,10 @@ PrefabInstance:
     - target: {fileID: 9053770152592794245, guid: e26cf088670e3b642a5dfa219c8302a9, type: 3}
       propertyPath: mainAttackDamage
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9053770152592794245, guid: e26cf088670e3b642a5dfa219c8302a9, type: 3}
+      propertyPath: minionLayers.m_Bits
+      value: 192
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e26cf088670e3b642a5dfa219c8302a9, type: 3}

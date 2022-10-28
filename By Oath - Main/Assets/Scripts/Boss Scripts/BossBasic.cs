@@ -6,8 +6,20 @@ public class BossBasic : MonoBehaviour
 {
     public Transform target;//The target that the boss gaze will follow
 
-    public int bossMaxHealth = 35;//boss's max health
+    public int bossMaxHealth = 35;//boss's max health 
 
+    public GameObject bulletPrefab;
+    public Transform firePoint;
+
+    [Header("Fire rate per Phase")]//the base fire rate of the boss's shooting 
+    public float fireRate;
+    public float fireRate2;
+    public float fireRate3;
+
+    [Header("Fire time per Phase")]//total time the boss fires for each phase 
+    public float fireTime;
+    public float fireTime2;
+    public float fireTime3;
 
     int bossCurrentHealth;//The boss's vurrent health
 
@@ -20,29 +32,13 @@ public class BossBasic : MonoBehaviour
     bool Phase1 = false;
     bool Phase2 = false;
 
-    [Header("Fire rate per Phase")]//the base fire rate of the boss's shooting 
-    public float fireRate;
-    public float fireRate2;
-    public float fireRate3;
-
-
-
-
-    [Header("Fire time per Phase")]//total time the boss fires for each phase 
-    public float fireTime;
-    public float fireTime2;
-    public float fireTime3;
-
-    public GameObject bulletPrefab;
-    public Transform firePoint;
-
 
     private void Start()
     {
         bossCurrentHealth = bossMaxHealth;//sets current healt to max health
-        thirdOfBossHealth = bossMaxHealth / 3;
-        healthThreshold1 = bossMaxHealth - thirdOfBossHealth;
-        healthThreshold2 = healthThreshold1 - thirdOfBossHealth;
+        thirdOfBossHealth = bossMaxHealth / 3;//calcs a third of the boriss health
+        healthThreshold1 = bossMaxHealth - thirdOfBossHealth;//calcs the first health threshold
+        healthThreshold2 = healthThreshold1 - thirdOfBossHealth;//calcs the second health threshold
 
     }
     private void Update()
@@ -56,23 +52,18 @@ public class BossBasic : MonoBehaviour
                 fireCountDown = 1f / fireRate; //sets new countdown 
             }
             fireCountDown -= Time.deltaTime;//starts counting down 
-
         }
-
     }
 
     void Shoot()//shoots
-    {
-
-
-        //  Debug.Log("The Boss is shooting");//debug log to say that the boss is shooting 
-        GameObject bulletG0 = (GameObject)Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+    {   
+        GameObject bulletG0 = (GameObject)Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);//spawns the bullet
 
         Bullet bullet = bulletG0.GetComponent<Bullet>();
 
         if (bullet != null)
         {
-            bullet.SetDestination(target);
+            bullet.SetDestination(target);//sets the bullets destination to the same as the bosses target
         }
 
     }
@@ -94,14 +85,14 @@ public class BossBasic : MonoBehaviour
             {
                 Debug.Log("boss has lost first third of health");
                 //start shooting again
-                fireTime = Time.time + fireTime2;
-                fireRate = fireRate2;
-                Shoot();
+                fireTime = Time.time + fireTime2;//adds the new fire time to current allowing boriss to shoot again
+                fireRate = fireRate2;//sets the new fire rate
+                Shoot();//calls shoot
 
-                bossCurrentHealth = healthThreshold1;
+                bossCurrentHealth = healthThreshold1;//makes sure the boriss health is at the right value
 
                 Debug.Log("the bosses current health is" + bossCurrentHealth);
-                Phase1 = true;
+                Phase1 = true;//enables this value so it skips this loop in future
             }
         }
 
@@ -110,24 +101,21 @@ public class BossBasic : MonoBehaviour
             if (Phase2 == false)
             {
                 if (bossCurrentHealth <= healthThreshold2)
-                {
-                    //start shooting again
+                {    
                     Debug.Log("boss has lost second third of health");
                     //start shooting again
-                    fireTime = Time.time + fireTime3;
-                    fireRate = fireRate3;
-                    Shoot();
+                    fireTime = Time.time + fireTime3;//adds the new fire time to current allowing boriss to shoot again
+                    fireRate = fireRate3;//sets the new fire rate
+                    Shoot();//calls shoot
 
-                    bossCurrentHealth = healthThreshold2;
+                    bossCurrentHealth = healthThreshold2;//makes sure the boriss health is at the right value
 
                     Debug.Log("the bosses current health is" + bossCurrentHealth);
 
-                    Phase2 = true;
-
+                    Phase2 = true;//enables this value so it skips this loop in future
                 }
             }
         }
-
 
         if (bossCurrentHealth <= 0)//if health is less then or equal to 0 call die
         {

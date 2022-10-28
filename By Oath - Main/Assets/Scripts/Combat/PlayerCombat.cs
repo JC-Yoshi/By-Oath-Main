@@ -6,21 +6,30 @@ public class PlayerCombat : MonoBehaviour
 {
     Enemy myEnemy;
     BossBasic bossBasic;
-    public HolyMeter holyMeter;
-    public HealthBar healthBar;
 
     //  public Animator animator;
 
     public Transform attackPoint; // The point from which the wepons range is calculated
+    [Header("Main Attack")]
     public float mainAttackRange = 0.5f;// the range the wepon can attack up to
+    public int mainAttackDamage = 1;// the players damage
+
+    [Header("Powwer Attack")]
+    public int seccondAttackDamage = 10;//seccondarys attack damage
     public float seccondAttackRange = 1.75f;//seccondary attacks range
-    public LayerMask enemyLayers;// defines what an enemy is
+
+    [Header("HUD Elements")]
+    public HolyMeter holyMeter;
+    public HealthBar healthBar;
+
+    [Header("Enemy Layers")]
+    public LayerMask minionLayers;// defines what an enemy is
     public LayerMask bossLayer;//defines the boss
 
-    public int mainAttackDamage = 1;// the players damage
-    public int seccondAttackDamage = 10;//seccondarys attack damage
+    [Header("Ammo")]
     public int amoCountMax = 5; //players amo count 
     int amoCount = 0;//keeps track of the players current ammo count
+    [Header("Health")]
     public int maxHealth = 15;//max health the player can have 
     int currentHealth = 1;//the players current health
 
@@ -73,7 +82,7 @@ public class PlayerCombat : MonoBehaviour
 
         amoCount--;
         holyMeter.SetWater(amoCount);//calling UI scripts
-        Collider[] hitEnemies = Physics.OverlapSphere(attackPoint.position, mainAttackRange, enemyLayers);
+        Collider[] hitEnemies = Physics.OverlapSphere(attackPoint.position, mainAttackRange, minionLayers);
 
         //damage them
         foreach (Collider enemy in hitEnemies)
@@ -105,7 +114,7 @@ public class PlayerCombat : MonoBehaviour
 
         amoCount = 0;
         holyMeter.SetWater(amoCount);
-        Collider[] hitEnemies = Physics.OverlapSphere(attackPoint.position, seccondAttackRange, enemyLayers);
+        Collider[] hitEnemies = Physics.OverlapSphere(attackPoint.position, seccondAttackRange, minionLayers);
 
 
         //damage them
