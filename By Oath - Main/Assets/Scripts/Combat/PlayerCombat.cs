@@ -4,21 +4,40 @@ using UnityEngine;
 
 public class PlayerCombat : MonoBehaviour
 {
-  //  public Animator animator;
+    Enemy myEnemy;
+    BossBasic bossBasic;
+    HolyMeter holyMeter;
+    HealthBar healthBar;
+
+
+
+    //  public Animator animator;
 
     public Transform attackPoint; // The point from which the wepons range is calculated
     public float mainAttackRange = 0.5f;// the range the wepon can attack up to
     public float seccondAttackRange = 1.75f;//seccondary attacks range
     public LayerMask enemyLayers;// defines what an enemy is
+    public LayerMask bossLayer;//defines the boss
 
     public int mainAttackDamage = 1;// the players damage
     public int seccondAttackDamage = 10;//seccondarys attack damage
     public int amoCountMax = 5; //players amo count 
-    int amoCount = 0;
+    int amoCount = 0;//keeps track of the players current ammo count
+    public int maxHealth = 15;//max health the player can have 
+    int currentHealth = 1;//the players current health
 
     private void Start()
     {
+        holyMeter = GameObject.FindGameObjectWithTag("Player").GetComponent<HolyMeter>();
+        holyMeter.SetMaxWater(amoCountMax);
+
+        healthBar = GameObject.FindGameObjectWithTag("Player").GetComponent<HealthBar>();
+        healthBar.SetMaxHealth(maxHealth);  
+
         amoCount = amoCountMax;
+        currentHealth = maxHealth;
+
+        
     }
 
     // Update is called once per frame
@@ -30,9 +49,9 @@ public class PlayerCombat : MonoBehaviour
             if (amoCount >= 0)
             {
                 MainAttack();
-            } 
+            }
             else
-            Debug.Log("Out of amo");  //will play a ui element telling the player to reload
+                Debug.Log("Out of amo");  //will play a ui element telling the player to reload
         }
 
         if (Input.GetKeyDown(KeyCode.Mouse1))//secondary attack
@@ -44,7 +63,7 @@ public class PlayerCombat : MonoBehaviour
             else
                 Debug.Log("Not enough ammo to powwer attack");//will play a ui element telling the player they dont have enough ammo
 
-        }      
+        }
     }
 
     void MainAttack()// the mainAttack function 
@@ -66,8 +85,23 @@ public class PlayerCombat : MonoBehaviour
             //damage the enemies
             Debug.Log("Hit" + enemy.name);
 
-            enemy.GetComponent<Enemy>().TakeDamage(mainAttackDamage);//calls the enemy script and allows damage to be done 
+            enemy.GetComponent<Enemy>().EnemyTakeDamage(mainAttackDamage);//calls the enemy script and allows damage to be done   
+
+            holyMeter = GameObject.FindGameObjectWithTag("Player").GetComponent<HolyMeter>();
+            holyMeter.SetWater(amoCount);
         }
+
+
+        Collider[] hitBoss = Physics.OverlapSphere(attackPoint.position,mainAttackRange, bossLayer);//detects any hit bosses
+
+        foreach ( Collider boss in hitBoss)//loops over hit bosses
+        {
+            Debug.Log("Hit" + boss.name);
+            boss.GetComponent<BossBasic>().BossTakeDamage(mainAttackDamage);//damages the boss
+            holyMeter = GameObject.FindGameObjectWithTag("Player").GetComponent<HolyMeter>();
+            holyMeter.SetWater(amoCount);
+        }
+
     }
 
     void SecondAttack()//seccondary attack, right mouse click
@@ -84,25 +118,67 @@ public class PlayerCombat : MonoBehaviour
 
 
         //damage them
-        foreach (Collider enemy in hitEnemies)
+        foreach (Collider enemy in hitEnemies)//loops over hit enemys
         {
             //damage the enemies
             Debug.Log("Hit" + enemy.name);
 
-            enemy.GetComponent<Enemy>().TakeDamage(seccondAttackDamage);//calls the enemy script and allows damage to be done 
+            enemy.GetComponent<Enemy>().EnemyTakeDamage(seccondAttackDamage);//calls the enemy script and allows damage to be done 
+
+            holyMeter = GameObject.FindGameObjectWithTag("Player").GetComponent<HolyMeter>();
+            holyMeter.SetWater(0);
+        }
+
+        Collider[] hitBoss = Physics.OverlapSphere(attackPoint.position, seccondAttackRange, bossLayer);//detects any hit bosses
+
+
+        //damage them
+        foreach (Collider boss in hitBoss)//loops over hit bosses
+        {
+            //damage the enemies
+            Debug.Log("Hit" + boss.name);
+            boss.GetComponent<BossBasic>().BossTakeDamage(seccondAttackDamage);//damages the boss
+
+            holyMeter = GameObject.FindGameObjectWithTag("Player").GetComponent<HolyMeter>();
+            holyMeter.SetWater(0);
         }
     }
 
-   public void Reload()
-   {
+    public void Reload()
+    {
 
         Debug.Log("Reloaded");//logs a reload
         amoCount = amoCountMax;//sets current amo = to max amo
-   }
+    }
+
+    public void PlayerTakeDamage(int Damage)
+    {
+        currentHealth -= Damage;// current health - damage of enemy
+
+        //play the damaged animation if there is one
+
+        healthBar = GameObject.FindGameObjectWithTag("Player").GetComponent<HealthBar>();
+        healthBar.SetHealth(currentHealth);
+
+
+        if (currentHealth <= 0)//if health is less then or equal to 0 call die
+        {
+            PlayerDie();
+        }
+    }
+
+    void PlayerDie()//die function 
+    {
+        Debug.Log("player is dead");
+        //death animation??
+
+        //Play death screen       
+    }
+
 
     private void OnDrawGizmosSelected()//draws the main attacks range
     {
-        
+
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(attackPoint.position, mainAttackRange);
     }
@@ -110,6 +186,6 @@ public class PlayerCombat : MonoBehaviour
     private void OnDrawGizmos()//draws the seccondary attacks range
     {
         Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(attackPoint.position , seccondAttackRange);
+        Gizmos.DrawWireSphere(attackPoint.position, seccondAttackRange);
     }
 }

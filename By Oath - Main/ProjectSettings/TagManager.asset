@@ -5,11 +5,13 @@ TagManager:
   serializedVersion: 2
   tags:
   - Tag_Reload
+  - Boss
+  - Enemy
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Player
   - Water
   - UI
   - RollieBois
@@ -17,8 +19,8 @@ TagManager:
   - PostProcessing
   - Not in Reflection
   - whatisGround
-  - 
-  - 
+  - BossLayer
+  - obstical
   - 
   - 
   - 
