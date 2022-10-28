@@ -5,9 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    public Animator transition;
+
+    public float transitionTime = 1f;
+
+    [SerializeField] LevelsLoader levelLoader;
+
     public void PlayGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        levelLoader.LoadNextLevel();
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     public void QuitGame()
