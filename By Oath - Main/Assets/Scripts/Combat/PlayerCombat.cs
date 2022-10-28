@@ -7,13 +7,10 @@ public class PlayerCombat : MonoBehaviour
     Enemy myEnemy;
     BossBasic bossBasic;
 
-
-
-
     //  public Animator animator;
 
-    public Transform attackPoint; // The point from which the wepons range is calculated
-    public float mainAttackRange = 0.5f;// the range the wepon can attack up to
+    public Transform attackPoint; //The point from which the wepons range is calculated
+    public float mainAttackRange = 0.5f;// the range the weapon can attack up to
     public float seccondAttackRange = 1.75f;//seccondary attacks range
     public LayerMask enemyLayers;// defines what an enemy is
     public LayerMask bossLayer;//defines the boss

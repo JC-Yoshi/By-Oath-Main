@@ -393,9 +393,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88e672b0639309b4783547ef6ecdf7fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  maxHealth: 500
   currentHealth: 0
   healthBar: {fileID: 787943386}
+  currentWater: 0
+  maxWater: 5
+  holyMeter: {fileID: 1448844655}
 --- !u!4 &630797031
 Transform:
   m_ObjectHideFlags: 0
@@ -516,6 +519,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2e9166530678e774492b76758b652f23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1448844655 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 913710583623852704, guid: 76b0323e487786a4c8c393753ee59f68, type: 3}
+  m_PrefabInstance: {fileID: 913710582911193663}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c96ce01c1c960e4c9b157bd0b622f17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1469481441
@@ -893,7 +907,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 913710583651683455, guid: 76b0323e487786a4c8c393753ee59f68, type: 3}
       propertyPath: m_Value
-      value: 100
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 913710583651683455, guid: 76b0323e487786a4c8c393753ee59f68, type: 3}
+      propertyPath: m_MaxValue
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 6878482705204934894, guid: 76b0323e487786a4c8c393753ee59f68, type: 3}
       propertyPath: m_Name

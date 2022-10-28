@@ -8,15 +8,15 @@ public class Player : MonoBehaviour
     public int currentHealth;
     public HealthBar healthBar;
 
-  /*  public int currentWater;
+    public int currentWater;
     public int maxWater = 5;
     public HolyMeter holyMeter;
-*/
+
     // Start is called before the first frame update
     void Start()
     {
-     /*   currentWater = maxWater;
-        holyMeter.SetMaxWater(maxWater);*/
+        currentWater = maxWater;
+        holyMeter.SetMaxWater(maxWater);
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
     }
@@ -24,16 +24,16 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Mouse0))
         {
 
             TakeDamage(20);
 
         }
-       /* if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             LoseWater(1);
-        }*/
+        }
     }
     void TakeDamage(int damage)
     {
@@ -43,11 +43,11 @@ public class Player : MonoBehaviour
             healthBar.SetHealth(currentHealth);
         }
     }
-    /*void LoseWater(int waterLoss)
+    void LoseWater(int waterLoss)
     {
         {
             currentWater -= waterLoss;
             holyMeter.SetWater(currentWater);
         }
-    }*/
+    }
 }
