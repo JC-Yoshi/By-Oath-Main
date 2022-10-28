@@ -188,6 +188,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d98447cb4d05b30458c9d73d5609768d, type: 3}
+--- !u!114 &354846064 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4288061166568885275, guid: e26cf088670e3b642a5dfa219c8302a9, type: 3}
+  m_PrefabInstance: {fileID: 8187877534665784161}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &396773560 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -6419941192673193041, guid: d98447cb4d05b30458c9d73d5609768d, type: 3}
@@ -690,6 +701,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1018802685 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4288061166624847095, guid: e26cf088670e3b642a5dfa219c8302a9, type: 3}
+  m_PrefabInstance: {fileID: 8187877534665784161}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1127492812 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8187877535721428909, guid: e26cf088670e3b642a5dfa219c8302a9, type: 3}
@@ -704,6 +726,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2e9166530678e774492b76758b652f23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1575697590 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4288061165336012936, guid: e26cf088670e3b642a5dfa219c8302a9, type: 3}
+  m_PrefabInstance: {fileID: 8187877534665784161}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &2085663269
@@ -1046,6 +1079,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1071139175679407969, guid: e26cf088670e3b642a5dfa219c8302a9, type: 3}
+      propertyPath: Cross1
+      value: 
+      objectReference: {fileID: 354846064}
+    - target: {fileID: 1071139175679407969, guid: e26cf088670e3b642a5dfa219c8302a9, type: 3}
+      propertyPath: Cross2
+      value: 
+      objectReference: {fileID: 1018802685}
+    - target: {fileID: 1071139175679407969, guid: e26cf088670e3b642a5dfa219c8302a9, type: 3}
+      propertyPath: Cross3
+      value: 
+      objectReference: {fileID: 1575697590}
+    - target: {fileID: 4288061165336012938, guid: e26cf088670e3b642a5dfa219c8302a9, type: 3}
+      propertyPath: m_TagString
+      value: Cross3
+      objectReference: {fileID: 0}
     - target: {fileID: 4288061165876934204, guid: e26cf088670e3b642a5dfa219c8302a9, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -1053,6 +1102,30 @@ PrefabInstance:
     - target: {fileID: 4288061165876934204, guid: e26cf088670e3b642a5dfa219c8302a9, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4288061166065095331, guid: e26cf088670e3b642a5dfa219c8302a9, type: 3}
+      propertyPath: m_TagString
+      value: Cross3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4288061166161964366, guid: e26cf088670e3b642a5dfa219c8302a9, type: 3}
+      propertyPath: m_TagString
+      value: Cross1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4288061166447011097, guid: e26cf088670e3b642a5dfa219c8302a9, type: 3}
+      propertyPath: m_TagString
+      value: Cross2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4288061166568885275, guid: e26cf088670e3b642a5dfa219c8302a9, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4288061166568885277, guid: e26cf088670e3b642a5dfa219c8302a9, type: 3}
+      propertyPath: m_TagString
+      value: Cross1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4288061166624847049, guid: e26cf088670e3b642a5dfa219c8302a9, type: 3}
+      propertyPath: m_TagString
+      value: Cross2
       objectReference: {fileID: 0}
     - target: {fileID: 4373126324225608664, guid: e26cf088670e3b642a5dfa219c8302a9, type: 3}
       propertyPath: m_RootOrder

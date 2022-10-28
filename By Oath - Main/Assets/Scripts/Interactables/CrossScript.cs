@@ -6,11 +6,14 @@ public class CrossScript : MonoBehaviour, IInteractable
 {
     Inventory inventory;
 
-    [SerializeField] private string prompt;
 
+    [SerializeField] private string prompt;
+    
 
     public string InteractionPrompt => prompt;
 
+
+    
     public bool Interact(Interactor interactor)
     {
         Debug.Log("collecing cross");//debug check log
@@ -23,6 +26,8 @@ public class CrossScript : MonoBehaviour, IInteractable
             inventory.cross1 = true;//makes cross1 be collected 
             inventory.CrossPickup1();//runs the pickup function, which triggers the UI changes and next wave spawn 
 
+           // GameObject.FindGameObjectWithTag("Cross1").SetActive(true);
+            
 
             GetComponent<CrossScript>().enabled = false;//disables the crossScript
                 this.gameObject.SetActive(false);  //disables the game object
@@ -37,6 +42,8 @@ public class CrossScript : MonoBehaviour, IInteractable
             {
                 inventory.cross2 = true;
                 inventory.CrossPickup2();
+
+              //  GameObject.FindGameObjectWithTag("Cross2").SetActive(true);
 
                 GetComponent<CrossScript>().enabled = false;
                 this.gameObject.SetActive(false);
@@ -56,6 +63,8 @@ public class CrossScript : MonoBehaviour, IInteractable
                 {
                     inventory.cross3 = true;
                     inventory.CrossPickup3();
+
+                   // GameObject.FindGameObjectWithTag("Cross3").SetActive(true);
 
                     GetComponent<CrossScript>().enabled = false;
                     this.gameObject.SetActive(false);

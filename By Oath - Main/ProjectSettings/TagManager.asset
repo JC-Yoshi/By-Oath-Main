@@ -8,6 +8,9 @@ TagManager:
   - Boss
   - Enemy
   - UI
+  - Cross1
+  - Cross2
+  - Cross3
   layers:
   - Default
   - TransparentFX
