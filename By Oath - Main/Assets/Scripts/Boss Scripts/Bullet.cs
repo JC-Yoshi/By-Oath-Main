@@ -63,6 +63,8 @@ public class Bullet : MonoBehaviour
 
         if (Time.time >= timeAlive)//if the time the bullets have been "alive" is equal to the boss total fireing time then destroy all bullets
         {
+
+            //return to attack point and re-set the target 
             Die();   
         }
     }
