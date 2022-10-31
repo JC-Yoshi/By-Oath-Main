@@ -6,6 +6,10 @@ public class PlayerCombat : MonoBehaviour
 {
     Enemy myEnemy;
     BossBasic bossBasic;
+    HolyMeter holyMeter;
+    HealthBar healthBar;
+
+
 
     //  public Animator animator;
 
@@ -24,8 +28,16 @@ public class PlayerCombat : MonoBehaviour
 
     private void Start()
     {
+        holyMeter = GameObject.FindGameObjectWithTag("Player").GetComponent<HolyMeter>();
+        holyMeter.SetMaxWater(amoCountMax);
+
+        healthBar = GameObject.FindGameObjectWithTag("Player").GetComponent<HealthBar>();
+        healthBar.SetMaxHealth(maxHealth);  
+
         amoCount = amoCountMax;
         currentHealth = maxHealth;
+
+        
     }
 
     // Update is called once per frame
@@ -74,6 +86,9 @@ public class PlayerCombat : MonoBehaviour
             Debug.Log("Hit" + enemy.name);
 
             enemy.GetComponent<Enemy>().EnemyTakeDamage(mainAttackDamage);//calls the enemy script and allows damage to be done   
+
+            holyMeter = GameObject.FindGameObjectWithTag("Player").GetComponent<HolyMeter>();
+            holyMeter.SetWater(amoCount);
         }
 
 
@@ -83,6 +98,8 @@ public class PlayerCombat : MonoBehaviour
         {
             Debug.Log("Hit" + boss.name);
             boss.GetComponent<BossBasic>().BossTakeDamage(mainAttackDamage);//damages the boss
+            holyMeter = GameObject.FindGameObjectWithTag("Player").GetComponent<HolyMeter>();
+            holyMeter.SetWater(amoCount);
         }
 
     }
@@ -107,6 +124,9 @@ public class PlayerCombat : MonoBehaviour
             Debug.Log("Hit" + enemy.name);
 
             enemy.GetComponent<Enemy>().EnemyTakeDamage(seccondAttackDamage);//calls the enemy script and allows damage to be done 
+
+            holyMeter = GameObject.FindGameObjectWithTag("Player").GetComponent<HolyMeter>();
+            holyMeter.SetWater(0);
         }
 
         Collider[] hitBoss = Physics.OverlapSphere(attackPoint.position, seccondAttackRange, bossLayer);//detects any hit bosses
@@ -118,6 +138,9 @@ public class PlayerCombat : MonoBehaviour
             //damage the enemies
             Debug.Log("Hit" + boss.name);
             boss.GetComponent<BossBasic>().BossTakeDamage(seccondAttackDamage);//damages the boss
+
+            holyMeter = GameObject.FindGameObjectWithTag("Player").GetComponent<HolyMeter>();
+            holyMeter.SetWater(0);
         }
     }
 
@@ -133,6 +156,10 @@ public class PlayerCombat : MonoBehaviour
         currentHealth -= Damage;// current health - damage of enemy
 
         //play the damaged animation if there is one
+
+        healthBar = GameObject.FindGameObjectWithTag("Player").GetComponent<HealthBar>();
+        healthBar.SetHealth(currentHealth);
+
 
         if (currentHealth <= 0)//if health is less then or equal to 0 call die
         {
