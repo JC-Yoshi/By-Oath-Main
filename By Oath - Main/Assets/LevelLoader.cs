@@ -8,6 +8,13 @@ public class LevelLoader : MonoBehaviour
     public Animator transition;
     public float transitionTime = 1f;
 
+    private IEnumerator Start()
+    {
+        yield return null;
+        yield return new WaitForEndOfFrame();
+        transition.SetTrigger("End");
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -28,7 +35,6 @@ public class LevelLoader : MonoBehaviour
     }
     IEnumerator LoadLevel(int levelIndex)
     {
-        yield return new WaitForEndOfFrame();
         transition.SetTrigger("Start");
 
         yield return new WaitForSecondsRealtime(transitionTime);
