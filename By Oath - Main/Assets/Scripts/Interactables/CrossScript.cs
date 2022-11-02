@@ -34,7 +34,7 @@ public class CrossScript : MonoBehaviour, IInteractable
         }
 
         //Above coments are repeted for each method below
-        if (inventory.cross1 == true)
+        if (inventory.cross1 == true)//triggers for the seccond cross pick up
         {
             if (inventory.cross2 == false)
             {
@@ -50,7 +50,7 @@ public class CrossScript : MonoBehaviour, IInteractable
             }
         }
 
-        if (inventory.cross1 == true)
+        if (inventory.cross1 == true)//triggers for the third cross pick up
         {
             if (inventory.cross2 == true)
             {

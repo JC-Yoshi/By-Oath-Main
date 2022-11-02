@@ -9,6 +9,8 @@ public class PlayerCombat : MonoBehaviour
 
     //  public Animator animator;
 
+    
+
     public Transform attackPoint; // The point from which the wepons range is calculated
     [Header("Main Attack")]
     public float mainAttackRange = 0.5f;// the range the wepon can attack up to
@@ -21,6 +23,10 @@ public class PlayerCombat : MonoBehaviour
     [Header("HUD Elements")]
     public HolyMeter holyMeter;
     public HealthBar healthBar;
+
+    [Header("Menu Elements")]
+    public GameObject pauseMenu;
+    public GameObject optionsMenu;
 
     [Header("Enemy Layers")]
     public LayerMask minionLayers;// defines what an enemy is
@@ -50,26 +56,35 @@ public class PlayerCombat : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.Mouse0))//triggers when left mouse click is clicked
+        if (pauseMenu.active == false)
         {
-            if (amoCount >= 0)
+            if (optionsMenu.active == false)
             {
-                MainAttack();
+                if (Input.GetKeyDown(KeyCode.Mouse0))//triggers when left mouse click is clicked
+                {
+                    if (amoCount >= 0)
+                    {
+                        MainAttack();
+                    }
+                    else
+                        Debug.Log("Out of amo");  //will play a ui element telling the player to reload
+                }
+
+                if (Input.GetKeyDown(KeyCode.Mouse1))//secondary attack
+                {
+                    if (amoCount == amoCountMax)//only attacks if player has max ammo
+                    {
+                        SecondAttack();
+                    }
+                    else
+                        Debug.Log("Not enough ammo to powwer attack");//will play a ui element telling the player they dont have enough ammo
+
+                }
             }
-            else
-                Debug.Log("Out of amo");  //will play a ui element telling the player to reload
+
         }
 
-        if (Input.GetKeyDown(KeyCode.Mouse1))//secondary attack
-        {
-            if (amoCount == amoCountMax)//only attacks if player has max ammo
-            {
-                SecondAttack();
-            }
-            else
-                Debug.Log("Not enough ammo to powwer attack");//will play a ui element telling the player they dont have enough ammo
 
-        }
     }
 
     void MainAttack()// the mainAttack function 

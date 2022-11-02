@@ -56,7 +56,7 @@ public class Inventory : MonoBehaviour
         if (cross3 == true)
         {
             //change UI
-            //trigger next wave spawn
+            //trigger wave spawn 
         }
 
     }
