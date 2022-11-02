@@ -12,11 +12,11 @@ GameObject:
   - component: {fileID: 9131469693740674310}
   - component: {fileID: 6439452608652941772}
   m_Layer: 0
-  m_Name: Msh_SaintStatueSmall_1
+  m_Name: Prefab_Msh_SaintStatueSmall_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &5266578074939908771
 Transform:

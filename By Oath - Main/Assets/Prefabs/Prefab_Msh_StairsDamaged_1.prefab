@@ -12,11 +12,11 @@ GameObject:
   - component: {fileID: 2359797082428979644}
   - component: {fileID: 530116029871705462}
   m_Layer: 0
-  m_Name: Msh_StairsDamaged_1
+  m_Name: Prefab_Msh_StairsDamaged_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &1661957338583643673
 Transform:

@@ -12,11 +12,11 @@ GameObject:
   - component: {fileID: 6713155054192167324}
   - component: {fileID: 8848761544149761366}
   m_Layer: 0
-  m_Name: Msh_DemonHole_1
+  m_Name: Prefab_Msh_DemonHole_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &7675876909480216121
 Transform:

@@ -12,11 +12,11 @@ GameObject:
   - component: {fileID: 633897460821938684}
   - component: {fileID: 3398239870022362422}
   m_Layer: 0
-  m_Name: Msh_Crypt_2
+  m_Name: Prefab_Msh_Crypt_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &4567729693555383897
 Transform:
