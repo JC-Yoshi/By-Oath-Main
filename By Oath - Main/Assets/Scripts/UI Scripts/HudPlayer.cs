@@ -9,11 +9,11 @@ public class HudPlayer : MonoBehaviour
 
     //int maxHealth = 15;//playerCombat.maxHealth;
  //   int currentHealth;
-    public HealthBar healthBar;
+   // public HealthBar healthBar;
 
   //  int currentAmo;
   //  int maxAmo = 5 ;//playerCombat.amoCountMax;
-    public HolyMeter holyMeter;
+   // public HolyMeter holyMeter;
 
     // Start is called before the first frame update
     void Start()
@@ -51,11 +51,11 @@ public class HudPlayer : MonoBehaviour
             healthBar.SetHealth(currentHealth);
         }
     }*/
-  public  void LoseWater(int waterLoss)
+ /* public  void LoseWater(int waterLoss)
     {
         {
             //currentAmo -= waterLoss;
             //holyMeter.SetWater(currentAmo);
         }
-    }
+    }*/
 }

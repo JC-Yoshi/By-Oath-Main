@@ -9,6 +9,8 @@ public class SettingsMenu : MonoBehaviour
     public AudioMixer audioMixer;
     Resolution[] resolutions;
 
+    private bool isSetYet = false;
+
     public TMPro.TMP_Dropdown resolutionDropdown;
 
 
@@ -22,6 +24,7 @@ public class SettingsMenu : MonoBehaviour
         List<string> options = new List<string>();
 
         int currentResolutionIndex = 0;
+       // Debug.Log(Screen.currentResolution);
 
         // loop through every element in our resolutions array
         for (int i = 0; i < resolutions.Length; i++)
@@ -35,7 +38,7 @@ public class SettingsMenu : MonoBehaviour
                 resolutions[i].height == Screen.currentResolution.height)
             {
                 // store the index of the correct resolution
-                currentResolutionIndex = 1;
+                currentResolutionIndex = i;
             }
         }
         // once done looping through we add our options list to our resolution drop down. 
@@ -48,8 +51,15 @@ public class SettingsMenu : MonoBehaviour
     // a method that sets the resolution of our screen
     public void SetResolution(int resolutionIndex)
     {
-        Resolution resolution = resolutions[resolutionIndex];
-        Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
+        if (!isSetYet)
+        {
+            isSetYet = true;
+        }
+        else
+        {
+            Resolution resolution = resolutions[resolutionIndex];
+            Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
+        }
     }
 
     // This is a function that we use to set the MAIN mixer using the slider provided in game via the UI. 

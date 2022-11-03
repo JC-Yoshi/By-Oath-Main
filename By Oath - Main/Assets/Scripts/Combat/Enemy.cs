@@ -12,6 +12,7 @@ public class Enemy : MonoBehaviour
     public float attackRate = 2f;//how many times the enemy can attack per second
     float nextAttackTime = 0f;//how long till the next attack
     public LayerMask playerLayer;// defines what the player is
+    public bool isAlive = true;
 
     PlayerCombat playerCombat;
 
@@ -66,6 +67,7 @@ public class Enemy : MonoBehaviour
 
     void EnemyDie()//die function 
     {
+        isAlive = false;
         Debug.Log("Enemy Died");
         //death animation
 
@@ -76,8 +78,12 @@ public class Enemy : MonoBehaviour
 
         this.enabled = false;
     }
+    public void Spawn()
+    {
+        this.gameObject.SetActive(true);
+    }
 
-    private void OnDrawGizmosSelected()//draws the attack range
+        private void OnDrawGizmosSelected()//draws the attack range
     {
 
         Gizmos.color = Color.yellow;
