@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5991493100877242579}
   - component: {fileID: 7244555320900644726}
   - component: {fileID: 4858579051064990652}
+  - component: {fileID: 5552706863496303470}
   m_Layer: 0
   m_Name: Msh_PitchFork
   m_TagString: Untagged
@@ -81,3 +82,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &5552706863496303470
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6371994889668639337}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -1572274460366966280, guid: aab263d6865531644b61878fa66f064e, type: 3}

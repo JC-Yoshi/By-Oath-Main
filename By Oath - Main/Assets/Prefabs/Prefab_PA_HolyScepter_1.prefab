@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 5598030139361355747}
   - component: {fileID: 8800008751619729478}
   - component: {fileID: 6772039570936536204}
+  - component: {fileID: -3164301470711151935}
   m_Layer: 0
-  m_Name: PA_HolyScepter_1
+  m_Name: Prefab_PA_HolyScepter_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -81,3 +82,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &-3164301470711151935
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5114930755564223833}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -6388498549777511563, guid: d7e74a59659cd8843942d8a7de9abe19, type: 3}

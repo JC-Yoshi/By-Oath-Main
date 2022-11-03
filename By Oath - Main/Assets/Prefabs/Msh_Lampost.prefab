@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6301252681694349448}
   - component: {fileID: 6979823477885863725}
   - component: {fileID: 5132317079667569639}
+  - component: {fileID: -8731638085241591930}
   m_Layer: 0
   m_Name: Msh_Lampost
   m_TagString: Untagged
@@ -81,3 +82,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &-8731638085241591930
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6645443060680282674}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -6750588208744668471, guid: fa36f5f8d0c50b74f81f0b6810543102, type: 3}

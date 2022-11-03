@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1824048198480533825}
   - component: {fileID: 3386576874037614308}
   - component: {fileID: 656257743048434222}
+  - component: {fileID: 260303730375784564}
   m_Layer: 0
   m_Name: Prefab_Msh_Grave_1
   m_TagString: Untagged
@@ -81,3 +82,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &260303730375784564
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1304780005488706555}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -6270401146659086052, guid: c41e6fe8347192f478e3f413f4e3502d, type: 3}

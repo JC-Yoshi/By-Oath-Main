@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1661957338583643673}
   - component: {fileID: 2359797082428979644}
   - component: {fileID: 530116029871705462}
+  - component: {fileID: 3778769552277269088}
   m_Layer: 0
   m_Name: Prefab_Msh_StairsDamaged_1
   m_TagString: Untagged
@@ -81,3 +82,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &3778769552277269088
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2043409135505108131}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -4424921441499997515, guid: 3e8caaf1f98ad7e459a99281137dcbaa, type: 3}
