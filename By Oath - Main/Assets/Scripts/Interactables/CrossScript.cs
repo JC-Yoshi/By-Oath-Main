@@ -6,11 +6,14 @@ public class CrossScript : MonoBehaviour, IInteractable
 {
     Inventory inventory;
 
-    [SerializeField] private string prompt;
 
+    [SerializeField] private string prompt;
+    
 
     public string InteractionPrompt => prompt;
 
+
+    
     public bool Interact(Interactor interactor)
     {
         Debug.Log("collecing cross");//debug check log
@@ -22,7 +25,7 @@ public class CrossScript : MonoBehaviour, IInteractable
         {
             inventory.cross1 = true;//makes cross1 be collected 
             inventory.CrossPickup1();//runs the pickup function, which triggers the UI changes and next wave spawn 
-
+     
 
             GetComponent<CrossScript>().enabled = false;//disables the crossScript
                 this.gameObject.SetActive(false);  //disables the game object
@@ -30,25 +33,24 @@ public class CrossScript : MonoBehaviour, IInteractable
             return true;
         }
 
-        //Above coments are repeted for each method 
-        if (inventory.cross1 == true)
+        //Above coments are repeted for each method below
+        if (inventory.cross1 == true)//triggers for the seccond cross pick up
         {
             if (inventory.cross2 == false)
             {
                 inventory.cross2 = true;
                 inventory.CrossPickup2();
 
+
                 GetComponent<CrossScript>().enabled = false;
                 this.gameObject.SetActive(false);
-                Destroy(gameObject);
-
-             
+                Destroy(gameObject); 
 
                 return true;
             }
         }
 
-        if (inventory.cross1 == true)
+        if (inventory.cross1 == true)//triggers for the third cross pick up
         {
             if (inventory.cross2 == true)
             {
@@ -59,9 +61,7 @@ public class CrossScript : MonoBehaviour, IInteractable
 
                     GetComponent<CrossScript>().enabled = false;
                     this.gameObject.SetActive(false);
-                    Destroy(gameObject);
-
-                 
+                    Destroy(gameObject); 
 
                     return true;
                 }
