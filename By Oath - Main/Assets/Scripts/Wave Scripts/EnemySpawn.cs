@@ -25,7 +25,8 @@ public class EnemySpawn : MonoBehaviour
 
     public void Spawn()
     {
-        // to be filled
+        this.gameObject.SetActive(true);
+
     }
 
     public bool IsAlive()
