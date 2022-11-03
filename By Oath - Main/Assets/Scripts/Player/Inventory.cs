@@ -34,7 +34,7 @@ public class Inventory : MonoBehaviour
         Debug.Log("picked up cross 1");
         if (cross1 == true)
         {
-            //change UI
+            
             //trigger next wave spawn
         }
     }
@@ -44,7 +44,7 @@ public class Inventory : MonoBehaviour
         Debug.Log("picked up cross 2");
         if (cross2 == true)
         {
-            //change UI
+            
             //trigger next wave spawn
         }
     }
@@ -55,7 +55,7 @@ public class Inventory : MonoBehaviour
 
         if (cross3 == true)
         {
-            //change UI
+           
             //trigger wave spawn 
         }
 
