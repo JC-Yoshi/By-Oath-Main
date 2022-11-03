@@ -28,6 +28,10 @@ public class LevelLoader : MonoBehaviour
     {
        StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex - 1));
     }
+    public void LoadMenuFromBoss()
+    {
+        StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex - 2));
+    }
     public void LoadNextLevel()
     {
        StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
