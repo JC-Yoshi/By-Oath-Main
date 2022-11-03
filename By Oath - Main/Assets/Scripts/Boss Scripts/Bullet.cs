@@ -19,7 +19,7 @@ public class Bullet : MonoBehaviour
     public Transform bulletPosition; // the bullets current position
     float timeAlive = 0f;
 
-    float attackRate = 3f;//the rate the "bullets" attack
+    float attackRate =3f;//the rate the "bullets" attack
     float nextAttackTime = 0f;//there next attack time 
 
 
@@ -63,6 +63,8 @@ public class Bullet : MonoBehaviour
 
         if (Time.time >= timeAlive)//if the time the bullets have been "alive" is equal to the boss total fireing time then destroy all bullets
         {
+
+            //return to attack point and re-set the target 
             Die();   
         }
     }
