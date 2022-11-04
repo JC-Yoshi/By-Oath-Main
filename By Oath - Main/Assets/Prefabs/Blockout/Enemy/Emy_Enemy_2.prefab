@@ -170,7 +170,7 @@ MonoBehaviour:
   attackRate: 2
   playerLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8
   isAlive: 1
 --- !u!135 &6660164802498852053
 SphereCollider:
