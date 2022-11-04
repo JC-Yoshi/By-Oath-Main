@@ -67,7 +67,7 @@ public class Enemy : MonoBehaviour
 
     void EnemyDie()//die function 
     {
-        isAlive = false;
+       isAlive = false;
         Debug.Log("Enemy Died");
         //death animation
 
@@ -76,7 +76,12 @@ public class Enemy : MonoBehaviour
         GetComponent<EnemyMove>().enabled = false;
         GetComponent<Collider>().enabled = false;
 
+       
+
         this.enabled = false;
+
+        Destroy(gameObject);
+
     }
     public void Spawn()
     {

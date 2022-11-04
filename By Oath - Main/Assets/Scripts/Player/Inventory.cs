@@ -18,6 +18,9 @@ public class Inventory : MonoBehaviour
     public Image Cross2;
     public Image Cross3;
 
+    public GameObject wave1;
+    public GameObject wave2;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -34,7 +37,9 @@ public class Inventory : MonoBehaviour
         Debug.Log("picked up cross 1");
         if (cross1 == true)
         {
-            
+            wave1.GetComponent<Wave>().enabled = true;
+
+
             //trigger next wave spawn
         }
     }
@@ -44,7 +49,9 @@ public class Inventory : MonoBehaviour
         Debug.Log("picked up cross 2");
         if (cross2 == true)
         {
-            
+
+
+            wave2.GetComponent<Wave>().enabled = true;
             //trigger next wave spawn
         }
     }
