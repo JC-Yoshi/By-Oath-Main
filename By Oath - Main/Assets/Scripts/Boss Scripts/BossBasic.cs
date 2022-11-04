@@ -30,6 +30,7 @@ public class BossBasic : MonoBehaviour
 
     float fireCountDown = 0f;//the cool down on shooting 
 
+    bool Phase0 = false;
     bool Phase1 = false;
     bool Phase2 = false;
 
@@ -79,6 +80,28 @@ public class BossBasic : MonoBehaviour
     {
         bossCurrentHealth -= Damage;// current health - damage of player
         Debug.Log("Boss taking damage");
+
+        if (Phase0== false)
+        {
+            if(bossCurrentHealth <= bossMaxHealth)
+            {
+                Debug.Log("The Boss Begins To Attack ");
+
+                bossCurrentHealth = bossMaxHealth;
+
+                fireTime = Time.time + fireTime;//adds the new fire time to current allowing boriss to shoot again
+                fireRate = fireRate;//sets the new fire rate
+                Shoot();//calls shoot
+
+                Debug.Log("the bosses current health is" + bossCurrentHealth);
+                Phase0 = true;//enables this value so it skips this loop in future
+
+            }
+
+
+        }
+
+
         //play the damaged animation if there is one
         if (Phase1 == false)
         {
