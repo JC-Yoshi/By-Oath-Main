@@ -123,6 +123,7 @@ public class Wave : MonoBehaviour
                         return false;
                     }
                 }
+                Debug.Log("Wave is defetead");
                 return true;
             }
             // enemies have not spawned yet

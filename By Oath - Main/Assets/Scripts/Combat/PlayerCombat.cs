@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerCombat : MonoBehaviour
 {
@@ -182,6 +183,9 @@ public class PlayerCombat : MonoBehaviour
         //death animation??
 
         //Play death screen       
+
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + -1);
+
     }
 
 
