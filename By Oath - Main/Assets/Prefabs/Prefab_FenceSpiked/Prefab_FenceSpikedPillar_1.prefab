@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1787613908579206120}
   - component: {fileID: 3414074819525102669}
   - component: {fileID: 614123133094770823}
+  - component: {fileID: 4800905482120670410}
   m_Layer: 0
   m_Name: Prefab_FenceSpikedPillar_1
   m_TagString: Untagged
@@ -81,3 +82,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &4800905482120670410
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1406585212658850130}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -8623888557379369929, guid: 0e2f9f48da5e2dc4cb181a5d6b202586, type: 3}
