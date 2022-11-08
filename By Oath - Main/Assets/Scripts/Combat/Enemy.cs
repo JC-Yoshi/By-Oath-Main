@@ -43,6 +43,8 @@ public class Enemy : MonoBehaviour
         {
             //damage the enemies
             Debug.Log("Hit" + player.name);
+            //Play attack sound 
+            
 
            // player.GetComponent<PlayerCombat>().PlayerTakeDamage(attackDamage);//calls the enemy script and allows damage to be done 
             playerCombat = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerCombat>();//allows this script to accsess the playerCombat script
