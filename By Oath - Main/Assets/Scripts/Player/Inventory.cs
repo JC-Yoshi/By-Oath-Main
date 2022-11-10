@@ -20,6 +20,7 @@ public class Inventory : MonoBehaviour
 
     public GameObject wave1;
     public GameObject wave2;
+    public GameObject wave3;
 
     // Start is called before the first frame update
     void Start()
@@ -62,8 +63,9 @@ public class Inventory : MonoBehaviour
 
         if (cross3 == true)
         {
-           
+
             //trigger wave spawn 
+            wave3.GetComponent<Wave>().enabled = true;
         }
 
     }
