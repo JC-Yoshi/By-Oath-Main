@@ -162,6 +162,14 @@ public class PlayerCombat : MonoBehaviour
         holyMeter.SetWater(amoCount);
     }
 
+    public void Heal()
+    {
+        int healValue = 2 / maxHealth;//calculates half the players max health 
+
+        if(currentHealth!= maxHealth)
+            currentHealth += healValue;//if the player is below half health add half there total health to there current health 
+    }
+
     public void PlayerTakeDamage(int Damage)
     {
         currentHealth -= Damage;// current health - damage of enemy

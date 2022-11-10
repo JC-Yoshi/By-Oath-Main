@@ -11,6 +11,14 @@ public class PlayerMovement : MonoBehaviour
 
     public float groundDrag;//the amonut of drag the ground provides
 
+    public float jumpForce;
+    public float jumpCooldown;
+    public float airMultiplier;
+    bool readyToJump;
+
+    [Header("KeyBinds")]
+    public KeyCode jumpKey = KeyCode.Space;
+
     [Header("Ground Check")]
     public float playerHeight;//the players height
     public LayerMask whatIsGround;//defines what te ground is
@@ -31,21 +39,39 @@ public class PlayerMovement : MonoBehaviour
     {
         rb=GetComponent<Rigidbody>();  //gets the rigidBody attached to this component 
         rb.freezeRotation=true;//stops player from falling over
+
+        readyToJump=true;
     }
 
     private void MyInput()// on input
     {
         horizontalInput = Input.GetAxisRaw("Horizontal");//a and w key inputs 
         verticalInput = Input.GetAxisRaw("Vertical");//w and s inputs
+
+        if(Input.GetKey(jumpKey) && readyToJump && grounded)//if you press space, ready to jump = true and your grounded
+        {
+            readyToJump = false;
+
+            Jump();
+
+            Invoke(nameof(ResetJump), jumpCooldown);//allows the player to jump continuesly 
+        }
     }
 
     private void MovePlayer()//moves the player 
     {
         //calculate the movement direction
         moveDirection=orientation.forward*verticalInput+orientation.right* horizontalInput;
-        
 
-        rb.AddForce(moveDirection.normalized* moveSpeed * 10f, ForceMode.Force); //applies calculated movement to the rigid body
+        //on ground 
+        if(grounded)
+           rb.AddForce(moveDirection.normalized* moveSpeed * 10f, ForceMode.Force); 
+
+        //in air
+        else if(!grounded)
+            rb.AddForce(moveDirection.normalized * moveSpeed * 10f * airMultiplier, ForceMode.Force);
+
+
     }
 
     private void SpeedControl()//controls the speed the player can reach
@@ -58,7 +84,18 @@ public class PlayerMovement : MonoBehaviour
             Vector3 limitedVel = flatVel.normalized*moveSpeed;
             rb.velocity = new Vector3(limitedVel.x, rb.velocity.y, limitedVel.z); 
         }       
+    }
 
+    private void Jump()
+    {
+        rb.velocity = new Vector3(rb.velocity.x, 0f, rb.velocity.z); //resets the y velocity so you allways jump the same height
+
+        rb.AddForce(transform.up * jumpForce, ForceMode.Impulse);//only to apllie force once
+    }
+
+    private void ResetJump()
+    {
+        readyToJump = true;
     }
 
     
@@ -73,10 +110,6 @@ public class PlayerMovement : MonoBehaviour
             rb.drag = groundDrag;
         else
             rb.drag = 0f;
-
-
-
-      
     }
 
     private void FixedUpdate()
