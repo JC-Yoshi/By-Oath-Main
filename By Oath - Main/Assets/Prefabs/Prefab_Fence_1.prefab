@@ -11,13 +11,13 @@ GameObject:
   - component: {fileID: 5176693149939446349}
   - component: {fileID: 8104391817846963688}
   - component: {fileID: 6313028678876481826}
-  - component: {fileID: -4377268808921275148}
+  - component: {fileID: 6924934416653430935}
   m_Layer: 0
   m_Name: Prefab_Fence_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &5176693149939446349
 Transform:
@@ -82,7 +82,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &-4377268808921275148
+--- !u!64 &6924934416653430935
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
