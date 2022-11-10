@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class Inventory : MonoBehaviour
 {
-    PlayerCombat playerCombat;
+    public GameObject player;
 
     public bool cross1;
     public bool cross2;
@@ -42,7 +42,7 @@ public class Inventory : MonoBehaviour
         {
             wave1.GetComponent<Wave>().enabled = true;
 
-            playerCombat.Heal();//heal the player 
+            player.GetComponent<PlayerCombat>().Heal();//heal the player 
 
             //trigger next wave spawn
         }
@@ -57,7 +57,7 @@ public class Inventory : MonoBehaviour
 
             wave2.GetComponent<Wave>().enabled = true;
 
-            playerCombat.Heal();//heal the player 
+            player.GetComponent<PlayerCombat>().Heal();//heal the player 
 
             //trigger next wave spawn
         }
@@ -71,7 +71,7 @@ public class Inventory : MonoBehaviour
         {
             wave3.GetComponent<Wave>().enabled = true;
 
-            playerCombat.Heal();//heal the player 
+            player.GetComponent<PlayerCombat>().Heal();//heal the player 
 
             //trigger wave spawn 
 
