@@ -52,6 +52,19 @@ MonoBehaviour:
   fireTime: 10
   fireTime2: 15
   fireTime3: 20
+--- !u!135 &5929041640531690586
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5722712142143364959}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 11
+  m_Center: {x: 0, y: 10, z: 0}
 --- !u!1001 &4875781626405593614
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -109,7 +122,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 47c52adafe6ed31489387fc31df629f9, type: 3}
       propertyPath: m_Name
-      value: Borris_Test_NoAnimation
+      value: Borris_Test_NoAnimation Variant
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 47c52adafe6ed31489387fc31df629f9, type: 3}
       propertyPath: m_Layer

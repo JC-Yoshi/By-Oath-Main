@@ -154,7 +154,10 @@ public class BossBasic : MonoBehaviour
         GetComponent<BossBasic>().enabled = false;
         Destroy(gameObject);
 
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex -2 );
+        Cursor.lockState = CursorLockMode.None;//unlocks the cursor to the center of the screen
+        Cursor.visible = true;//make the mouse visable 
+
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex -1 );
         return;
 
         //trigger win screen 
