@@ -65,7 +65,7 @@ public class Wave : MonoBehaviour
             {
                 // Battle is over!
                 state = State.BattleOver;
-                Debug.Log("Battle is Over!");
+                Debug.Log("Battle is Over!"); //trigger next cross spawn 
             }
         }
     }

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8833293817316629841}
   - component: {fileID: 5564745413275210484}
   - component: {fileID: 7700316649069487678}
+  - component: {fileID: 5706872710581196484}
   m_Layer: 0
   m_Name: Msh_SaintStatue
   m_TagString: Untagged
@@ -81,3 +82,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &5706872710581196484
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8204988156047493099}
+  m_Material: {fileID: 13400000, guid: 94b02e524c7652a478a33eec9d1b51fa, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -6614748326162825840, guid: 9aa767e2a61d3dc45afa10dc8a4d327e, type: 3}

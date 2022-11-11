@@ -5,22 +5,13 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/Real Main Menu.unity
     guid: 356631a304f60a14fa9310597fbf3a4e
+  - enabled: 1
+    path: Assets/Scenes/Graveyard_Arena.unity
+    guid: a5e245ad869bffd408c0fc95bc5bf152
   - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 1
-    path: Assets/Scenes/OB1.Graveyard_Arena.unity
-    guid: b9d709987791cc64d924eb71aa33af94
-  - enabled: 1
     path: Assets/Scenes/Boss_Blockout.unity
     guid: 2637db144fc71af48b65f56b6bc1615e
-  - enabled: 0
-    path: Assets/Scenes/OB_Graveyard_Arena.unity
-    guid: 5d74816caab724342b1f888429526307
   m_configObjects: {}
