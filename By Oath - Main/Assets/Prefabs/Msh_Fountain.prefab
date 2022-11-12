@@ -12,12 +12,13 @@ GameObject:
   - component: {fileID: 8414770862587895615}
   - component: {fileID: 5990828526239689717}
   - component: {fileID: -719997357765883956}
-  m_Layer: 0
+  - component: {fileID: 4931790226626932309}
+  m_Layer: 9
   m_Name: Msh_Fountain
-  m_TagString: Untagged
+  m_TagString: Tag_Reload
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &4857305995662381210
 Transform:
@@ -99,6 +100,20 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -1519441883505694680, guid: d382ad5f0eeb43e418345b1a873e987a, type: 3}
+--- !u!114 &4931790226626932309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5198084972839471648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38a8abd7b2e1a644598d64c667851727, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  reloadRate: 10
+  prompt: 
 --- !u!1001 &747937663878096105
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -106,6 +121,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4857305995662381210}
     m_Modifications:
+    - target: {fileID: 780497713793347380, guid: 51a2d580929e1e3438b0c529780ba0c4, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 1758829616800336481, guid: 51a2d580929e1e3438b0c529780ba0c4, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -155,13 +174,33 @@ PrefabInstance:
       value: Fountain_Water
       objectReference: {fileID: 0}
     - target: {fileID: 3559395794290677261, guid: 51a2d580929e1e3438b0c529780ba0c4, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3559395794290677261, guid: 51a2d580929e1e3438b0c529780ba0c4, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4938450390155108361, guid: 51a2d580929e1e3438b0c529780ba0c4, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 8807228794968217934, guid: 51a2d580929e1e3438b0c529780ba0c4, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a81de53a7cec8bf439122e54d845d914, type: 2}
+    - target: {fileID: 8807228794968217935, guid: 51a2d580929e1e3438b0c529780ba0c4, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8807228796006756421, guid: 51a2d580929e1e3438b0c529780ba0c4, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8807228796337229186, guid: 51a2d580929e1e3438b0c529780ba0c4, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 51a2d580929e1e3438b0c529780ba0c4, type: 3}
 --- !u!4 &1299758398161874568 stripped
@@ -187,6 +226,10 @@ PrefabInstance:
     - target: {fileID: 7714769190444606762, guid: 0f46f94b2c0c394458e8cc1432ed0a89, type: 3}
       propertyPath: m_Name
       value: blue
+      objectReference: {fileID: 0}
+    - target: {fileID: 7714769190444606762, guid: 0f46f94b2c0c394458e8cc1432ed0a89, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 7714769190444606767, guid: 0f46f94b2c0c394458e8cc1432ed0a89, type: 3}
       propertyPath: m_RootOrder
