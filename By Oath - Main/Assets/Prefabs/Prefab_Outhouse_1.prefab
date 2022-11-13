@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 5029678708406531048}
   - component: {fileID: 8242389645005274189}
   - component: {fileID: 6162664815555070087}
+  - component: {fileID: -2229158267057649284}
   m_Layer: 0
-  m_Name: Msh_Outhouse_1
+  m_Name: Prefab_Outhouse_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -81,3 +82,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &-2229158267057649284
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5658441495982303570}
+  m_Material: {fileID: 13400000, guid: 94b02e524c7652a478a33eec9d1b51fa, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 1267454067350070433, guid: 48a5374b26fc280488bac825fce67f31, type: 3}

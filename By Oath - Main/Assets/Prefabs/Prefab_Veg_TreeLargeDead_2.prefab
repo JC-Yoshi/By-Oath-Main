@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 3139771215784246278}
   - component: {fileID: 897977747547097292}
   - component: {fileID: -8506649276179589387}
-  - component: {fileID: 4003735419632147655}
   m_Layer: 0
   m_Name: Prefab_Veg_TreeLargeDead_2
   m_TagString: Untagged
@@ -91,20 +90,6 @@ MeshCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1690748101665466649}
   m_Material: {fileID: 13400000, guid: 94b02e524c7652a478a33eec9d1b51fa, type: 2}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 2559924130596552330, guid: 72663253b4f9de441af20841ca04b170, type: 3}
---- !u!64 &4003735419632147655
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1690748101665466649}
-  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
