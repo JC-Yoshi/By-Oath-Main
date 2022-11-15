@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8476303842521023503}
   - component: {fileID: 5928168839646703813}
   - component: {fileID: 111709838387088393}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Msh_RuinWall_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
