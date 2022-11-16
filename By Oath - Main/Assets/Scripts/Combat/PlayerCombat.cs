@@ -8,7 +8,7 @@ public class PlayerCombat : MonoBehaviour
     Enemy myEnemy;
     BossBasic bossBasic;
 
-    //  public Animator animator;
+      public Animator animator;
 
     
 
@@ -71,8 +71,11 @@ public class PlayerCombat : MonoBehaviour
             {
                 if (Input.GetKeyDown(KeyCode.Mouse0))//triggers when left mouse click is clicked
                 {
+                    
                     if (amoCount >= 0)
                     {
+
+
                         MainAttack();
                     }
                     else
@@ -103,8 +106,7 @@ public class PlayerCombat : MonoBehaviour
     void MainAttack()// the mainAttack function 
     {
         //play the attack animation, to be fully implemented once animator is ready
-        // animator.SetTrigger("Attack"); // name of the trigger will go in the brakets
-
+        animator.SetTrigger("MainAttack");
 
         // use up ammo
         amoCount--;
@@ -134,12 +136,13 @@ public class PlayerCombat : MonoBehaviour
             boss.GetComponent<BossBasic>().BossTakeDamage(mainAttackDamage);//damages the boss
 
         }
+        
     }
 
     void SecondAttack()//seccondary attack, right mouse click
     {
         //play the attack animation, to be fully implemented once animator is ready
-        // animator.SetTrigger("Attack"); // name of the trigger will go in the brakets
+        animator.SetTrigger("SecondaryAttack"); // name of the trigger will go in the brakets
 
 
         //detect enemies in range
@@ -175,7 +178,11 @@ public class PlayerCombat : MonoBehaviour
         Debug.Log("Reloaded");//logs a reload
         amoCount = amoCountMax;//sets current amo = to max amo
 
+        animator.SetTrigger("Reload");
+        
+
         holyMeter.SetWater(amoCount);
+        
     }
 
     public void Heal()
@@ -187,24 +194,26 @@ public class PlayerCombat : MonoBehaviour
             currentHealth += halfHealth;//if the player is below half health add half there total health to there current health 
             healthBar.SetMaxHealth(currentHealth);//changes the UI to refflect new health value
         }
-            
-
-
     }
 
     public void PlayerTakeDamage(int Damage)
     {
+
+        
         currentHealth -= Damage;// current health - damage of enemy
 
         //play the damaged animation if there is one
+        animator.SetTrigger("TakeDamage");
 
         healthBar.SetHealth(currentHealth);
-
+        
 
         if (currentHealth <= 0)//if health is less then or equal to 0 call die
         {
             PlayerDie();
         }
+
+        
     }
 
     void PlayerDie()//die function 
