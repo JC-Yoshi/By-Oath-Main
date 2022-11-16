@@ -422,7 +422,7 @@ MonoBehaviour:
   maxHealth: 2
   attackDamage: 2
   attackPoint: {fileID: 8693992349842413365}
-  attackRange: 0.39
+  attackRange: 0.9
   attackRate: 2
   playerLayer:
     serializedVersion: 2
