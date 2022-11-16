@@ -40,6 +40,11 @@ public class PlayerCombat : MonoBehaviour
     public int maxHealth = 15;//max health the player can have 
     [SerializeField]int currentHealth = 1;//the players current health
 
+    private AudioSource audSrc;
+    public AudioClip[] attackSounds;
+    public AudioClip[] emptySounds;
+
+
     private void Start()
     {
 
@@ -51,6 +56,7 @@ public class PlayerCombat : MonoBehaviour
 
         healthBar.SetMaxHealth(maxHealth);
 
+        audSrc = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -68,7 +74,11 @@ public class PlayerCombat : MonoBehaviour
                         MainAttack();
                     }
                     else
-                        Debug.Log("Out of amo");  //will play a ui element telling the player to reload
+                    {
+                        //play empty ammo sound
+                        audSrc.PlayOneShot(emptySounds[Random.Range(0, emptySounds.Length)]);
+                        Debug.Log("Out of ammo");  //will play a ui element telling the player to reload
+                    }
                 }
 
                 if (Input.GetKeyDown(KeyCode.Mouse1))//secondary attack
@@ -94,10 +104,14 @@ public class PlayerCombat : MonoBehaviour
         // animator.SetTrigger("Attack"); // name of the trigger will go in the brakets
 
 
-        //detect enemies in range
-
+        // use up ammo
         amoCount--;
         holyMeter.SetWater(amoCount);//calling UI scripts
+        // play attack sound
+        audSrc.PlayOneShot(attackSounds[Random.Range(0, attackSounds.Length)]);
+
+
+        //detect enemies in range
         Collider[] hitEnemies = Physics.OverlapSphere(attackPoint.position, mainAttackRange, minionLayers);
 
         //damage them

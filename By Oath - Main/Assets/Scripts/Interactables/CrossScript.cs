@@ -8,12 +8,45 @@ public class CrossScript : MonoBehaviour, IInteractable
 
 
     [SerializeField] private string prompt;
-    
+    public AudioClip[] crossPickupSounds;
+    public GameObject crossFX;
+    private AudioSource audSrc;
 
     public string InteractionPrompt => prompt;
 
 
-    
+
+    void Start()
+    {
+        audSrc = GetComponent<AudioSource>();
+    }
+
+
+    void ActivateCross()
+    {
+        audSrc.Stop();
+        audSrc.loop = false;
+        audSrc.PlayOneShot(crossPickupSounds[Random.Range(0, crossPickupSounds.Length)]);
+    }
+
+
+    void DeactivateCross()
+    {
+        // used to do this to "clean up the cross"
+        GetComponent<CrossScript>().enabled = false;//disables the crossScript
+        //this.gameObject.SetActive(false);  //disables the game object
+        //Destroy(gameObject);//destroys the game object  
+
+        // disable mesh renderer
+        GetComponent<MeshRenderer>().enabled = false;
+        // disable collider
+        GetComponent<Collider>().enabled = false;
+        // disable FX
+        crossFX.SetActive(false);
+
+    }
+
+
     public bool Interact(Interactor interactor)
     {
         Debug.Log("collecing cross");//debug check log
@@ -23,13 +56,11 @@ public class CrossScript : MonoBehaviour, IInteractable
         //runs checks for crosses as the player works there way though collecting them, triggering the next wave as they go 
         if (inventory.cross1 == false)
         {
+            ActivateCross();
             inventory.cross1 = true;//makes cross1 be collected 
             inventory.CrossPickup1();//runs the pickup function, which triggers the UI changes and next wave spawn 
      
-
-            GetComponent<CrossScript>().enabled = false;//disables the crossScript
-                this.gameObject.SetActive(false);  //disables the game object
-                Destroy(gameObject);//destroys the game object  
+            DeactivateCross();
             return true;
         }
 
@@ -38,14 +69,11 @@ public class CrossScript : MonoBehaviour, IInteractable
         {
             if (inventory.cross2 == false)
             {
+                ActivateCross();
                 inventory.cross2 = true;
                 inventory.CrossPickup2();
 
-
-                GetComponent<CrossScript>().enabled = false;
-                this.gameObject.SetActive(false);
-                Destroy(gameObject); 
-
+                DeactivateCross();
                 return true;
             }
         }
@@ -56,13 +84,11 @@ public class CrossScript : MonoBehaviour, IInteractable
             {
                 if (inventory.cross3 == false)
                 {
+                    ActivateCross(); 
                     inventory.cross3 = true;
                     inventory.CrossPickup3();
 
-                    GetComponent<CrossScript>().enabled = false;
-                    this.gameObject.SetActive(false);
-                    Destroy(gameObject); 
-
+                    DeactivateCross();
                     return true;
                 }
             }
