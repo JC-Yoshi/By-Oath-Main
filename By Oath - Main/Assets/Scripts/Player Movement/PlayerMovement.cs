@@ -16,6 +16,9 @@ public class PlayerMovement : MonoBehaviour
     public float airMultiplier;
     bool readyToJump;
 
+    [Header("Animator")]
+    public Animator animator;
+
     [Header("KeyBinds")]
     public KeyCode jumpKey = KeyCode.Space;
 
@@ -25,7 +28,7 @@ public class PlayerMovement : MonoBehaviour
     bool grounded;// yes on ground or no not on ground
 
     public Transform orientation;
-    
+
 
     float horizontalInput;
     float verticalInput;
@@ -34,22 +37,46 @@ public class PlayerMovement : MonoBehaviour
 
     Rigidbody rb;// provides acsses to the rigid body 
 
-   
+
     void Start()
     {
-        rb=GetComponent<Rigidbody>();  //gets the rigidBody attached to this component 
-        rb.freezeRotation=true;//stops player from falling over
+        rb = GetComponent<Rigidbody>();  //gets the rigidBody attached to this component 
+        rb.freezeRotation = true;//stops player from falling over
 
-        readyToJump=true;
+        readyToJump = true;
     }
 
     private void MyInput()// on input
     {
-        horizontalInput = Input.GetAxisRaw("Horizontal");//a and w key inputs 
+        horizontalInput = Input.GetAxisRaw("Horizontal");//a and d key inputs 
         verticalInput = Input.GetAxisRaw("Vertical");//w and s inputs
 
-        if(Input.GetKey(jumpKey) && readyToJump && grounded)//if you press space, ready to jump = true and your grounded
+        if (horizontalInput != 0)
         {
+            animator.SetBool("Walking", true);
+        }
+        else
+        {
+            animator.SetBool("Walking", false);
+        }
+
+        if (verticalInput != 0)
+        {
+            animator.SetBool("Walking", true);
+        }
+        else
+        {
+            animator.SetBool("Walking", false);
+        }
+
+
+
+
+
+        if (Input.GetKey(jumpKey) && readyToJump && grounded)//if you press space, ready to jump = true and your grounded
+        {
+            animator.SetTrigger("Jump");
+
             readyToJump = false;
 
             Jump();
@@ -60,17 +87,25 @@ public class PlayerMovement : MonoBehaviour
 
     private void MovePlayer()//moves the player 
     {
+
         //calculate the movement direction
-        moveDirection=orientation.forward*verticalInput+orientation.right* horizontalInput;
+        moveDirection = orientation.forward * verticalInput + orientation.right * horizontalInput;
 
         //on ground 
-        if(grounded)
-           rb.AddForce(moveDirection.normalized* moveSpeed * 10f, ForceMode.Force); 
+        if (grounded)
+        {
+            rb.AddForce(moveDirection.normalized * moveSpeed * 10f, ForceMode.Force); //adds the move force
+            animator.SetBool("IsFalling", true);
+            animator.SetTrigger("Landed");
+        }
+
 
         //in air
-        else if(!grounded)
-            rb.AddForce(moveDirection.normalized * moveSpeed * 10f * airMultiplier, ForceMode.Force);
-
+        else if (!grounded)
+        {
+            rb.AddForce(moveDirection.normalized * moveSpeed * 10f * airMultiplier, ForceMode.Force);//adds jump force
+            animator.SetBool("IsFalling", true);
+        }
 
     }
 
@@ -81,13 +116,14 @@ public class PlayerMovement : MonoBehaviour
         //limit the velocity if its to high 
         if (flatVel.magnitude > moveSpeed)
         {
-            Vector3 limitedVel = flatVel.normalized*moveSpeed;
-            rb.velocity = new Vector3(limitedVel.x, rb.velocity.y, limitedVel.z); 
-        }       
+            Vector3 limitedVel = flatVel.normalized * moveSpeed;
+            rb.velocity = new Vector3(limitedVel.x, rb.velocity.y, limitedVel.z);
+        }
     }
 
     private void Jump()
     {
+
         rb.velocity = new Vector3(rb.velocity.x, 0f, rb.velocity.z); //resets the y velocity so you allways jump the same height
 
         rb.AddForce(transform.up * jumpForce, ForceMode.Impulse);//only to apllie force once
@@ -98,13 +134,13 @@ public class PlayerMovement : MonoBehaviour
         readyToJump = true;
     }
 
-    
+
     void Update()
     {
         grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.2f, whatIsGround);// calculates if the player is on the ground
 
         MyInput();
-        SpeedControl(); 
+        SpeedControl();
         // below code handles Drag
         if (grounded)
             rb.drag = groundDrag;
