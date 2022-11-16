@@ -662,6 +662,7 @@ MonoBehaviour:
     m_Bits: 2048
   amoCountMax: 5
   maxHealth: 15
+  currentHealth: 1
 --- !u!114 &2326176073913966561
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -964,15 +965,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5609555688953601024, guid: eb701489861b6044f93b2cacffd854da, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.06
+      value: -0.063
       objectReference: {fileID: 0}
     - target: {fileID: 5609555688953601024, guid: eb701489861b6044f93b2cacffd854da, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.268
+      value: 0.114
       objectReference: {fileID: 0}
     - target: {fileID: 5609555688953601024, guid: eb701489861b6044f93b2cacffd854da, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.429
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 5609555688953601024, guid: eb701489861b6044f93b2cacffd854da, type: 3}
       propertyPath: m_LocalRotation.w
