@@ -12,6 +12,8 @@ public class Enemy : MonoBehaviour
     public float attackRate = 2f;//how many times the enemy can attack per second
     float nextAttackTime = 0f;//how long till the next attack
     public LayerMask playerLayer;// defines what the player is
+    public AudioClip[] attackClips;
+    private AudioSource audSrc;
     public bool isAlive = true;
 
     PlayerCombat playerCombat;
@@ -19,15 +21,16 @@ public class Enemy : MonoBehaviour
     void Start()
     {
         currentHealth = maxHealth;//sets current health to max on start
+        audSrc = GetComponent<AudioSource>();
     }
 
     private void Update()
     {
-        if(Time.time >= nextAttackTime)//if enough time has passed then the enemy can attack
+        if (Time.time >= nextAttackTime)//if enough time has passed then the enemy can attack
         {
-         Attack();
+            Attack();
 
-         nextAttackTime = Time.time + 1f / attackRate;//once attacked 1/attackrate is how long till the next attack
+            nextAttackTime = Time.time + 1f / attackRate;//once attacked 1/attackrate is how long till the next attack
 
         }
 
@@ -43,16 +46,19 @@ public class Enemy : MonoBehaviour
         {
             //damage the enemies
             Debug.Log("Hit" + player.name);
-            //Play attack sound 
-            
 
-           // player.GetComponent<PlayerCombat>().PlayerTakeDamage(attackDamage);//calls the enemy script and allows damage to be done 
+            //Play attack sound
+            if (attackClips.Length > 0)
+            {
+                Debug.Log("Attack sound play!");
+                audSrc.PlayOneShot(attackClips[Random.Range(0, attackClips.Length)]);
+            }
+
+            // player.GetComponent<PlayerCombat>().PlayerTakeDamage(attackDamage);//calls the enemy script and allows damage to be done 
             playerCombat = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerCombat>();//allows this script to accsess the playerCombat script
             playerCombat.PlayerTakeDamage(attackDamage);
         }
-
-
-
+        
     }
 
     public void EnemyTakeDamage(int Damage)
@@ -69,7 +75,7 @@ public class Enemy : MonoBehaviour
 
     void EnemyDie()//die function 
     {
-       isAlive = false;
+        isAlive = false;
         Debug.Log("Enemy Died");
         //death animation
 
@@ -78,7 +84,7 @@ public class Enemy : MonoBehaviour
         GetComponent<EnemyMove>().enabled = false;
         GetComponent<Collider>().enabled = false;
 
-       
+
 
         this.enabled = false;
 
@@ -90,7 +96,7 @@ public class Enemy : MonoBehaviour
         this.gameObject.SetActive(true);
     }
 
-        private void OnDrawGizmosSelected()//draws the attack range
+    private void OnDrawGizmosSelected()//draws the attack range
     {
 
         Gizmos.color = Color.yellow;

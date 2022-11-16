@@ -18,7 +18,7 @@ public class EnemyMove : MonoBehaviour
     {
         navMeshAgent = this.GetComponent<NavMeshAgent>();
 
-        if(navMeshAgent == null)
+        if (navMeshAgent == null)
         {
             Debug.Log("No connected navmesh to" + gameObject.name);//gives a debug log if there isnt a neve mesh 
         }
@@ -27,15 +27,22 @@ public class EnemyMove : MonoBehaviour
             SetDestination();//runs the method
         }
 
-        
+
     }
 
     private void SetDestination()//this sets the destination for the agent 
     {
-        if(destination != null)
+        if (destination != null)
         {
-            Vector3 targetVector = destination.transform.position ;//finds the destinations location and sets = to target vector
-            navMeshAgent.SetDestination(targetVector);  //makes the navMesh agents target = to the traget vector
+            Vector3 targetVector = destination.transform.position;//finds the destinations location and sets = to target vector
+            if (navMeshAgent.isOnNavMesh)
+            {
+                navMeshAgent.SetDestination(targetVector);  //makes the navMesh agents target = to the traget vector
+            }
+            else
+            {
+                Debug.Log("ERROR:  Agent is not on Nav Mesh!");
+            }
         }
     }
 
