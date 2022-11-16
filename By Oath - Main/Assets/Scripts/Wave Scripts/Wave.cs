@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Wave : MonoBehaviour
 {
+
+    public GameObject nextCross;
+
     private enum State
     {
         Idle,
@@ -76,6 +79,7 @@ public class Wave : MonoBehaviour
             if (group.IsGroupDead())
             {
                 // wave is over
+                nextCross.active = true;
             }
             else
             {

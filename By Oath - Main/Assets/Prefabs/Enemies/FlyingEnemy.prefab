@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3336134659239787305}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Claw_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3412553651830337247}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MidWing01_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71,7 +71,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7954860513168054806}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MidWing04_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -102,7 +102,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8371916312405762158}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: InnerWing03_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -133,7 +133,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4758305027161390709}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: AttackPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -148,7 +148,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 677154225279677690}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.4833996, y: 2.0420792, z: 1.1871814}
+  m_LocalPosition: {x: -0.014, y: 1.46, z: -0.293}
   m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
   m_Children: []
   m_Father: {fileID: 7950088437644381304}
@@ -163,7 +163,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2820513680508840107}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MidWing01_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -194,7 +194,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3377755872866199940}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: InnerWing02_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -225,7 +225,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 87079968083273508}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: InnerWing02_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -256,7 +256,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1628306914006291616}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: InnerWing01_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -287,7 +287,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7051042477583692781}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: InnerWing04_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -318,7 +318,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 492752108305067339}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: UpperArm_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -352,7 +352,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8811232940869571054}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: InnerWing03_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -383,7 +383,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8661814548390412251}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: InnerWing04_R_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -413,7 +413,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2278034436671895746}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: OuterWing03_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -444,7 +444,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9041060610116342667}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: OuterWing02_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -475,7 +475,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8330351474191115478}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: LowerArm_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -506,7 +506,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7495040146758533991}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: OuterWing04_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -537,7 +537,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1843813407756045950}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FlyingEnemyArmature
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -568,7 +568,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8430138866210870702}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: OuterWing01_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -599,7 +599,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6069396282797884988}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MidWing02_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -630,7 +630,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8698257008658594956}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: OuterWing03_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -661,7 +661,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 881903963212562449}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Shoulder_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -692,7 +692,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8409665565227506983}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: UpperArm_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -726,7 +726,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7842314920527033445}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MidWing04_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -757,7 +757,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1571058299942521573}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Claw_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -788,7 +788,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6885487458319858033}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Shoulder_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -819,7 +819,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8375783840713267963}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: OuterWing02_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -850,7 +850,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3148435011613529757}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: OuterWing01_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -881,7 +881,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4356622461579731981}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: OuterWing04_L_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -911,7 +911,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4555194597800409599}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: InnerWing01_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -942,7 +942,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7970408745668023117}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Main
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -973,7 +973,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4332161387081977862}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MidWing03_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1004,7 +1004,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 386192995236943244}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: OuterWing04_R_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1034,7 +1034,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3988213254023210307}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: InnerWing04_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1065,7 +1065,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6324794985891105600}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: OuterWing04_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1096,7 +1096,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1888399196727425436}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MidWing04_L_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1126,7 +1126,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4105952958678121624}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1158,7 +1158,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1535130462823594891}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: LowerArm_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1193,7 +1193,8 @@ GameObject:
   - component: {fileID: -6225927361581442908}
   - component: {fileID: -5876026357500128833}
   - component: {fileID: 2298287416451426019}
-  m_Layer: 0
+  - component: {fileID: 8818223659846902461}
+  m_Layer: 7
   m_Name: FlyingEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1271,13 +1272,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 5
-  attackDamage: 0
+  attackDamage: 2
   attackPoint: {fileID: 4758305027161390709}
-  attackRange: 0.6
+  attackRange: 0.9
   attackRate: 2
   playerLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8
   isAlive: 1
 --- !u!114 &2298287416451426019
 MonoBehaviour:
@@ -1292,6 +1293,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 0}
+--- !u!135 &8818223659846902461
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7286740619438560962}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0.3, z: 0}
 --- !u!1 &7624535969468339466
 GameObject:
   m_ObjectHideFlags: 0
@@ -1301,7 +1315,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 770050804751880235}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Claw_L_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1331,7 +1345,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5295214604130943013}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MidWing04_R_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1361,7 +1375,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4580337374617958170}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MidWing03_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1393,7 +1407,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1485007960230565929}
   - component: {fileID: 7912568232187647165}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Emy_Enemy_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1509,7 +1523,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 646325587377251742}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Claw_R_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1539,7 +1553,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7697233384650591355}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: InnerWing04_L_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1569,7 +1583,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4873873699564214495}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MidWing02_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
