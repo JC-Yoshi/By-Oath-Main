@@ -1190,6 +1190,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7950088437644381304}
   - component: {fileID: 1733760262482978620}
+  - component: {fileID: 2011875237830708999}
   - component: {fileID: -6225927361581442908}
   - component: {fileID: -5876026357500128833}
   - component: {fileID: 2298287416451426019}
@@ -1209,7 +1210,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7286740619438560962}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 1.06, z: 0}
   m_LocalScale: {x: 2.5, y: 2.5, z: 2.5}
   m_Children:
   - {fileID: 1485007960230565929}
@@ -1237,6 +1238,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!135 &2011875237830708999
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7286740619438560962}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0.3, z: 0}
 --- !u!195 &-6225927361581442908
 NavMeshAgent:
   m_ObjectHideFlags: 0
