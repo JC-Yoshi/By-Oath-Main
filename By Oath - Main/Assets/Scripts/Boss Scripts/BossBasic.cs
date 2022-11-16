@@ -81,7 +81,7 @@ public class BossBasic : MonoBehaviour
         bossCurrentHealth -= Damage;// current health - damage of player
         Debug.Log("Boss taking damage");
 
-        if (Phase0== false)
+        if (Phase0 == false)
         {
             if(bossCurrentHealth <= bossMaxHealth)
             {

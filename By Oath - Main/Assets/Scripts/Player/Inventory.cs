@@ -8,6 +8,9 @@ public class Inventory : MonoBehaviour
 {
     public GameObject player;
 
+    public Animator animator;
+
+    [Header("UI Elements")]
     public bool cross1;
     public bool cross2;
     public bool cross3;
@@ -19,7 +22,7 @@ public class Inventory : MonoBehaviour
     public Image Cross1;//the image for each cross
     public Image Cross2;
     public Image Cross3;
-
+    [Header("Waves")]
     public GameObject wave1;
     public GameObject wave2;
     public GameObject wave3;
@@ -42,8 +45,9 @@ public class Inventory : MonoBehaviour
         {
             wave1.GetComponent<Wave>().enabled = true;
 
-            player.GetComponent<PlayerCombat>().Heal();//heal the player 
+            player.GetComponent<PlayerCombat>().Heal();//heal the player
 
+            animator.SetTrigger("CrossPickUp");
             //trigger next wave spawn
         }
     }
@@ -59,6 +63,7 @@ public class Inventory : MonoBehaviour
 
             player.GetComponent<PlayerCombat>().Heal();//heal the player 
 
+            animator.SetTrigger("CrossPickUp");
             //trigger next wave spawn
         }
     }
@@ -72,6 +77,8 @@ public class Inventory : MonoBehaviour
             wave3.GetComponent<Wave>().enabled = true;
 
             player.GetComponent<PlayerCombat>().Heal();//heal the player 
+
+            animator.SetTrigger("CrossPickUp");
 
             //trigger wave spawn 
 

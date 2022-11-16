@@ -60,6 +60,8 @@ MonoBehaviour:
     - {fileID: 0}
     - {fileID: 0}
     timer: 4
+  bellSounds:
+  - {fileID: 8300000, guid: e0b28910e67611c4ba05bb08c7465a4d, type: 3}
 --- !u!1 &784249857680194166
 GameObject:
   m_ObjectHideFlags: 0

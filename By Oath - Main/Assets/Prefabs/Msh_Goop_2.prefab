@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4421165667610963147}
   - component: {fileID: 1927493954170411009}
   - component: {fileID: -1503896306232996012}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Msh_Goop_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
