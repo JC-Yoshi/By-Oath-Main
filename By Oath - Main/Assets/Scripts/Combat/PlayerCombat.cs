@@ -39,6 +39,7 @@ public class PlayerCombat : MonoBehaviour
     [Header("Health")]
     public int maxHealth = 15;//max health the player can have 
     [SerializeField]int currentHealth = 1;//the players current health
+    
 
     private AudioSource audSrc;
     public AudioClip[] attackSounds;
@@ -47,7 +48,7 @@ public class PlayerCombat : MonoBehaviour
 
     private void Start()
     {
-
+        
         amoCount = amoCountMax;
 
         holyMeter.SetMaxWater(amoCountMax);
@@ -57,6 +58,7 @@ public class PlayerCombat : MonoBehaviour
         healthBar.SetMaxHealth(maxHealth);
 
         audSrc = GetComponent<AudioSource>();
+        int halfHealth = currentHealth / 2;
     }
 
     // Update is called once per frame
@@ -178,10 +180,16 @@ public class PlayerCombat : MonoBehaviour
 
     public void Heal()
     {
-        int healValue =  maxHealth / 2;//calculates half the players max health 
+        int halfHealth =  maxHealth / 2; //calculates half the players max health 
 
         if(currentHealth!= maxHealth)
-            currentHealth += healValue;//if the player is below half health add half there total health to there current health 
+        {
+            currentHealth += halfHealth;//if the player is below half health add half there total health to there current health 
+            healthBar.SetMaxHealth(currentHealth);//changes the UI to refflect new health value
+        }
+            
+
+
     }
 
     public void PlayerTakeDamage(int Damage)
