@@ -227,7 +227,7 @@ public class PlayerCombat : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;//unlocks the cursor to the center of the screen
         Cursor.visible = true;//make the mouse visable 
 
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + -1);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 
     }
 

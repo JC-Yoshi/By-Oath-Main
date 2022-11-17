@@ -407,8 +407,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.6912079, y: 0.8797575, z: 0.7317734}
-  m_Center: {x: 0.017623901, y: 0.32066303, z: -0.0366745}
+  m_Size: {x: 0.6912079, y: 1.3096688, z: 0.7317734}
+  m_Center: {x: 0.017623901, y: 0.53561866, z: -0.0366745}
 --- !u!114 &4771723206877318656
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -431,9 +431,6 @@ MonoBehaviour:
     m_Bits: 8
   attackClips:
   - {fileID: 8300000, guid: 7ad76dce8c03ea74495d3db0621c0a9f, type: 3}
-  deathClips:
-  - {fileID: 8300000, guid: 3f03c39f32118424487f7280ecc6917c, type: 3}
-  - {fileID: 8300000, guid: 72829f5c431a59b46bd1c912f55cac5c, type: 3}
   isAlive: 1
 --- !u!114 &6044994013885452971
 MonoBehaviour:
