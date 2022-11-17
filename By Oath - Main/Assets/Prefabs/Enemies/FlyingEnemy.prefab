@@ -1290,12 +1290,15 @@ MonoBehaviour:
   attackDamage: 2
   attackPoint: {fileID: 4758305027161390709}
   attackRange: 0.9
-  attackRate: 2
+  attackRate: 0.8
   playerLayer:
     serializedVersion: 2
     m_Bits: 8
   attackClips:
   - {fileID: 8300000, guid: 7ad76dce8c03ea74495d3db0621c0a9f, type: 3}
+  deathClips:
+  - {fileID: 8300000, guid: 3f03c39f32118424487f7280ecc6917c, type: 3}
+  - {fileID: 8300000, guid: 72829f5c431a59b46bd1c912f55cac5c, type: 3}
   isAlive: 1
 --- !u!114 &2298287416451426019
 MonoBehaviour:
