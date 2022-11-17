@@ -29,7 +29,7 @@ Transform:
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 8676943074540886903}
+  - {fileID: 8453752115283879609}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -82,17 +82,13 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!1001 &749393022994285914
+--- !u!1001 &530602292613970068
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 2904787981988905229}
     m_Modifications:
-    - target: {fileID: 1030188310942547118, guid: 405fd7f27f30d9041bdc7ce35e67f7b6, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1329359306261248080, guid: 405fd7f27f30d9041bdc7ce35e67f7b6, type: 3}
       propertyPath: m_Name
       value: Collider
@@ -103,7 +99,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8218173471829564973, guid: 405fd7f27f30d9041bdc7ce35e67f7b6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.006
+      value: -0.024
       objectReference: {fileID: 0}
     - target: {fileID: 8218173471829564973, guid: 405fd7f27f30d9041bdc7ce35e67f7b6, type: 3}
       propertyPath: m_LocalPosition.y
@@ -111,7 +107,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8218173471829564973, guid: 405fd7f27f30d9041bdc7ce35e67f7b6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.017
+      value: -0.007
       objectReference: {fileID: 0}
     - target: {fileID: 8218173471829564973, guid: 405fd7f27f30d9041bdc7ce35e67f7b6, type: 3}
       propertyPath: m_LocalRotation.w
@@ -143,8 +139,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 405fd7f27f30d9041bdc7ce35e67f7b6, type: 3}
---- !u!4 &8676943074540886903 stripped
+--- !u!4 &8453752115283879609 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8218173471829564973, guid: 405fd7f27f30d9041bdc7ce35e67f7b6, type: 3}
-  m_PrefabInstance: {fileID: 749393022994285914}
+  m_PrefabInstance: {fileID: 530602292613970068}
   m_PrefabAsset: {fileID: 0}

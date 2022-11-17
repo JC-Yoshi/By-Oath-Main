@@ -16,8 +16,8 @@ GameObject:
   m_Name: Msh_Goop_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 1
-  m_StaticEditorFlags: 4294967295
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967287
   m_IsActive: 1
 --- !u!4 &789529979524588398
 Transform:
