@@ -137,7 +137,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prompt: 
   crossPickupSounds:
-  - {fileID: 8300000, guid: af21c16be3f95b549bb38e86e47866ab, type: 3}
+  - {fileID: 8300000, guid: 4a08ad09d1eaedc4dba431364b69cfa2, type: 3}
   crossFX: {fileID: 4158292825554517818}
 --- !u!1001 &1217517314368093636
 PrefabInstance:

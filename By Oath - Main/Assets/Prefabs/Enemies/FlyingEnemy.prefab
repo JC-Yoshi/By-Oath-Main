@@ -1190,11 +1190,10 @@ GameObject:
   m_Component:
   - component: {fileID: 7950088437644381304}
   - component: {fileID: 1733760262482978620}
-  - component: {fileID: 2011875237830708999}
+  - component: {fileID: 3438882461448171523}
   - component: {fileID: -6225927361581442908}
   - component: {fileID: -5876026357500128833}
   - component: {fileID: 2298287416451426019}
-  - component: {fileID: 8818223659846902461}
   m_Layer: 7
   m_Name: FlyingEnemy
   m_TagString: Untagged
@@ -1238,8 +1237,8 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!135 &2011875237830708999
-SphereCollider:
+--- !u!65 &3438882461448171523
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1249,8 +1248,8 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0.3, z: 0}
+  m_Size: {x: 0.7752146, y: 0.85631096, z: 0.72169554}
+  m_Center: {x: -0.028326822, y: 0.22815548, z: -0.028439904}
 --- !u!195 &-6225927361581442908
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1293,6 +1292,7 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 8
+  attackClips: []
   isAlive: 1
 --- !u!114 &2298287416451426019
 MonoBehaviour:
@@ -1307,19 +1307,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 0}
---- !u!135 &8818223659846902461
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7286740619438560962}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0.3, z: 0}
 --- !u!1 &7624535969468339466
 GameObject:
   m_ObjectHideFlags: 0
