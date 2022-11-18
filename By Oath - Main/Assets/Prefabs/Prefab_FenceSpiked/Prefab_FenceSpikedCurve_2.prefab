@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 8560827585524837018}
   - component: {fileID: 4711311399955834175}
   - component: {fileID: 7387319046054433269}
+  - component: {fileID: -583594657039374500}
   m_Layer: 0
-  m_Name: Msh_FenceSpikedCurve_2
+  m_Name: Prefab_FenceSpikedCurve_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -81,3 +82,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &-583594657039374500
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9044912470961090592}
+  m_Material: {fileID: 13400000, guid: 94b02e524c7652a478a33eec9d1b51fa, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 6230222852545547116, guid: 5ae5873a5eb444e498f698f28bc1e6b6, type: 3}

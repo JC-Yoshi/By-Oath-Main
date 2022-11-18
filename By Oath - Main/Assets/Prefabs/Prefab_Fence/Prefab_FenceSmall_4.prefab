@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4876864473892919768}
   - component: {fileID: 8359175633839003261}
   - component: {fileID: 6045298250863600311}
+  - component: {fileID: -3500848619675776203}
   m_Layer: 0
   m_Name: Prefab_FenceSmall_4
   m_TagString: Untagged
@@ -81,3 +82,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &-3500848619675776203
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5252827513132696418}
+  m_Material: {fileID: 13400000, guid: 94b02e524c7652a478a33eec9d1b51fa, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 6168934892562684770, guid: 65aaf5fb926a6654aa905446dc267b1a, type: 3}
