@@ -568,6 +568,9 @@ GameObject:
   - component: {fileID: 1071139175679407969}
   - component: {fileID: 6937862620556297695}
   - component: {fileID: 8345664451841432789}
+  - component: {fileID: 1332754544956296522}
+  - component: {fileID: 7571263648903335853}
+  - component: {fileID: 3239998921237975530}
   m_Layer: 3
   m_Name: Test_Player
   m_TagString: Player
@@ -856,6 +859,52 @@ MonoBehaviour:
   audSrc: {fileID: 0}
   rb: {fileID: 0}
   timer_duration: 0
+--- !u!114 &1332754544956296522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8569526978236585220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a5eafc6d27459b49ba73e3a4d13feae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerCollider: {fileID: 1270165076708600443}
+  isGrounded: 0
+  isOnTerrain: 0
+--- !u!114 &7571263648903335853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8569526978236585220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 971f7340ae5d97b48b7d2ec2881dc8dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTransform: {fileID: 0}
+  terrainObject: {fileID: 0}
+  posX: 0
+  posZ: 0
+  textureValues:
+  - 0
+  - 0
+--- !u!114 &3239998921237975530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8569526978236585220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff947697ecf458649a83cde3deef5958, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8931348435395158135
 GameObject:
   m_ObjectHideFlags: 0
