@@ -386,7 +386,14 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events: []
+      events:
+      - time: 0.47651005
+        functionName: Anim_SpecialSpray
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 729bbc67c64c46648bd4d1b92c8c0433, type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}
