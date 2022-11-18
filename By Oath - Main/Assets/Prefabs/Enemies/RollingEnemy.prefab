@@ -488,7 +488,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9a13ef946cdc8744a95ff3eaa7ce0d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 5
+  maxHealth: 2
   attackDamage: 1
   attackPoint: {fileID: 8045194262840017930}
   attackRange: 0.6
