@@ -667,6 +667,8 @@ MonoBehaviour:
   amoCountMax: 5
   maxHealth: 15
   currentHealth: 1
+  attackSounds: []
+  emptySounds: []
 --- !u!114 &2326176073913966561
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1074,6 +1076,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3045837176483191968}
     m_Modifications:
+    - target: {fileID: 2919133496119595863, guid: eb701489861b6044f93b2cacffd854da, type: 3}
+      propertyPath: ScepterSpray
+      value: 
+      objectReference: {fileID: 3072917563279590126}
     - target: {fileID: 5085396864483296954, guid: eb701489861b6044f93b2cacffd854da, type: 3}
       propertyPath: m_Name
       value: PA_HandsByOath
@@ -1124,6 +1130,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb701489861b6044f93b2cacffd854da, type: 3}
+--- !u!198 &3072917563279590126 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 6250818902873232775, guid: eb701489861b6044f93b2cacffd854da, type: 3}
+  m_PrefabInstance: {fileID: 8942579387142281065}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3585790813164096361 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5609555688953601024, guid: eb701489861b6044f93b2cacffd854da, type: 3}

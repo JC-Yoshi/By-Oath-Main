@@ -16,7 +16,7 @@ public class AlterScript :MonoBehaviour, IInteractable
     {
       
         bOSS.SetActive(true);
-
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         return true;
     } 
     
