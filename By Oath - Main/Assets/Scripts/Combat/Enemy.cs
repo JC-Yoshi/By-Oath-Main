@@ -17,7 +17,8 @@ public class Enemy : MonoBehaviour
     public bool isAlive = true;
 
     PlayerCombat playerCombat;
-   public Animator animator;
+    public Animator animator;
+    public ParticleSystem GetHitFlare;
 
     void Start()
     {
@@ -69,6 +70,8 @@ public class Enemy : MonoBehaviour
         currentHealth -= Damage;// current health - damage of player
 
         animator.SetTrigger("GetHit");
+        GetHitFlare.Play();
+
         //play the damaged animation if there is one
 
         if (currentHealth <= 0)//if health is less then or equal to 0 call die
@@ -101,6 +104,8 @@ public class Enemy : MonoBehaviour
     {
         this.gameObject.SetActive(true);
     }
+
+
 
     private void OnDrawGizmosSelected()//draws the attack range
     {
