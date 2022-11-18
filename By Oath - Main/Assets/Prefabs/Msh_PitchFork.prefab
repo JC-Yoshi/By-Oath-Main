@@ -12,11 +12,11 @@ GameObject:
   - component: {fileID: 3651249601347300515}
   - component: {fileID: 1535498101153290345}
   m_Layer: 0
-  m_Name: Msh_Pitchfork
+  m_Name: Msh_PitchFork
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &361417991463150342
 Transform:
