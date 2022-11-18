@@ -1,0 +1,8 @@
+newmtl DefaultHDMaterial
+Kd 0.7279412 0.7279412 0.7279412
+d 1
+
+newmtl New_Material
+Kd 0.2591014 0.6132076 0.2516465
+d 1
+
