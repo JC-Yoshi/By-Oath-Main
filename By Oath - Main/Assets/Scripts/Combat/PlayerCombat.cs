@@ -107,6 +107,7 @@ public class PlayerCombat : MonoBehaviour
     {
         //play the attack animation, to be fully implemented once animator is ready
         animator.SetTrigger("MainAttack");
+        //also play particals 
 
         // use up ammo
         amoCount--;

@@ -1262,7 +1262,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 6.5
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -1294,11 +1294,7 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 8
-  attackClips:
-  - {fileID: 8300000, guid: 7ad76dce8c03ea74495d3db0621c0a9f, type: 3}
-  deathClips:
-  - {fileID: 8300000, guid: 3f03c39f32118424487f7280ecc6917c, type: 3}
-  - {fileID: 8300000, guid: 72829f5c431a59b46bd1c912f55cac5c, type: 3}
+  attackClips: []
   isAlive: 1
 --- !u!114 &2298287416451426019
 MonoBehaviour:
