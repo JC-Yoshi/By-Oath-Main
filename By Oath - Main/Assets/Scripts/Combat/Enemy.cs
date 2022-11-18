@@ -17,6 +17,7 @@ public class Enemy : MonoBehaviour
     public bool isAlive = true;
 
     PlayerCombat playerCombat;
+   public Animator animator;
 
     void Start()
     {
@@ -54,6 +55,8 @@ public class Enemy : MonoBehaviour
                 audSrc.PlayOneShot(attackClips[Random.Range(0, attackClips.Length)]);
             }
 
+            animator.SetTrigger("Attack");
+
             // player.GetComponent<PlayerCombat>().PlayerTakeDamage(attackDamage);//calls the enemy script and allows damage to be done 
             playerCombat = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerCombat>();//allows this script to accsess the playerCombat script
             playerCombat.PlayerTakeDamage(attackDamage);
@@ -65,11 +68,14 @@ public class Enemy : MonoBehaviour
     {
         currentHealth -= Damage;// current health - damage of player
 
+        animator.SetTrigger("GetHit");
         //play the damaged animation if there is one
 
         if (currentHealth <= 0)//if health is less then or equal to 0 call die
         {
             EnemyDie();
+            //death animation
+        animator.SetTrigger("Death");
         }
     }
 
@@ -77,9 +83,9 @@ public class Enemy : MonoBehaviour
     {
         isAlive = false;
         Debug.Log("Enemy Died");
-        //death animation
-
+        
         //dissable the enemy
+
 
         GetComponent<EnemyMove>().enabled = false;
         GetComponent<Collider>().enabled = false;

@@ -1296,6 +1296,7 @@ MonoBehaviour:
     m_Bits: 8
   attackClips: []
   isAlive: 1
+  animator: {fileID: 1733760262482978620}
 --- !u!114 &2298287416451426019
 MonoBehaviour:
   m_ObjectHideFlags: 0
