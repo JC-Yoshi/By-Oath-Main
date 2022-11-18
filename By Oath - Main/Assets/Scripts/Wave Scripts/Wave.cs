@@ -72,7 +72,11 @@ public class Wave : MonoBehaviour
                 // Battle is over!
                 state = State.BattleOver;
                 audSrc.PlayOneShot(bellSounds[Random.Range(0, bellSounds.Length)]);
+
                 Debug.Log("Battle is Over!"); //trigger next cross spawn 
+
+                // wave is over
+                nextCross.active = true;
             }
         }
     }
@@ -83,7 +87,7 @@ public class Wave : MonoBehaviour
             if (group.IsGroupDead())
             {
                 // wave is over
-                nextCross.active = true;
+               // nextCross.active = true;
             }
             else
             {
