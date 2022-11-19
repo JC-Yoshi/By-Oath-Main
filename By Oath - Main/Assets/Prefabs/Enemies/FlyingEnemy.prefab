@@ -1295,7 +1295,8 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 8
-  attackClips: []
+  attackClips:
+  - {fileID: 8300000, guid: 7ad76dce8c03ea74495d3db0621c0a9f, type: 3}
   isAlive: 1
   animator: {fileID: 1733760262482978620}
   GetHitFlare: {fileID: 4369360570486220821, guid: ecb86f669d956e0489652b0b421ba3ef, type: 3}
@@ -1324,7 +1325,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 24300002, guid: 86c53e62e66f4374982b5c32888d5a87, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1466,7 +1467,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sounds:
+  - {fileID: 8300000, guid: 756ec654302532f4998eba45bb58ef8c, type: 3}
   - {fileID: 8300000, guid: 1fa8a25d3149c134ba9e3ae5daec1d6d, type: 3}
+  - {fileID: 8300000, guid: 9ec186e135274fb459a2b567f5e2b9b9, type: 3}
+  - {fileID: 8300000, guid: 2bcab5b361d7172478fccd14a082e640, type: 3}
   audSrc: {fileID: 0}
   timer_min: 2
   timer_max: 10
