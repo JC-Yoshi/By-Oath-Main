@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8957868962567569652}
   - component: {fileID: 5476207586210041681}
   - component: {fileID: 7789981063187119003}
-  - component: {fileID: -956675809392141213}
+  - component: {fileID: -7965629602016354352}
   m_Layer: 0
   m_Name: Msh_RuinWall_4
   m_TagString: Untagged
@@ -82,8 +82,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &-956675809392141213
-MeshCollider:
+--- !u!65 &-7965629602016354352
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -92,7 +92,6 @@ MeshCollider:
   m_Material: {fileID: 13400000, guid: 94b02e524c7652a478a33eec9d1b51fa, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 1588994675623094291, guid: 121207ab17f98fc46b4a616b801ac40c, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 2, y: 0.75910276, z: 0.29999998}
+  m_Center: {x: 1, y: 0.37955138, z: -0.14999999}
