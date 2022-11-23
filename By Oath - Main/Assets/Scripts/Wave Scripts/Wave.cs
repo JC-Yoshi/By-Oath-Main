@@ -31,6 +31,7 @@ public class Wave : MonoBehaviour
     {
         //colliderTrigger.OnPlayerEnterTrigger += ColliderTrigger_OnPlayerEnterTrigger;
         audSrc = GameObject.Find("BellSoundHolder").GetComponent<AudioSource>();
+        
     }
 
     private void ColliderTrigger_OnPlayerEnterTrigger(object sender, System.EventArgs e)
