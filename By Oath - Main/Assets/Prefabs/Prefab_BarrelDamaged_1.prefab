@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6151327575230541679}
   - component: {fileID: 7129827422511390922}
   - component: {fileID: 4978389682027074560}
-  - component: {fileID: -1600780516884541646}
+  - component: {fileID: 4654796065775393161}
   m_Layer: 0
   m_Name: Prefab_BarrelDamaged_1
   m_TagString: Untagged
@@ -82,8 +82,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &-1600780516884541646
-MeshCollider:
+--- !u!65 &4654796065775393161
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -92,7 +92,6 @@ MeshCollider:
   m_Material: {fileID: 13400000, guid: 94b02e524c7652a478a33eec9d1b51fa, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 7948112789050585410, guid: 5f6349ae116fd5f4b9e9d9df173804f3, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 1.0367792, y: 0.9214308, z: 0.79798216}
+  m_Center: {x: 0, y: 0.37164205, z: 0}

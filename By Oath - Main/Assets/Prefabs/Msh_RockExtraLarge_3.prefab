@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6929610492131523843}
   - component: {fileID: 6306507955040596646}
   - component: {fileID: 8097965654156396140}
+  - component: {fileID: -4350083696310993330}
   m_Layer: 0
   m_Name: Msh_RockExtraLarge_3
   m_TagString: Untagged
@@ -81,3 +82,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &-4350083696310993330
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7737532343121995705}
+  m_Material: {fileID: 13400000, guid: 94b02e524c7652a478a33eec9d1b51fa, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: -1
+  m_Mesh: {fileID: 3121664667464651730, guid: c7765c4b527d9c547bbea23c6e059657, type: 3}
