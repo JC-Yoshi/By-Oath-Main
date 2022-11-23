@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 911400097391454847}
   - component: {fileID: 4254259089351714266}
   - component: {fileID: 2084847029851902224}
-  - component: {fileID: 8606543468473379637}
   m_Layer: 0
   m_Name: Prefab_GateCorner_1
   m_TagString: Untagged
@@ -82,17 +81,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &8606543468473379637
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 571430640553455813}
-  m_Material: {fileID: 13400000, guid: 94b02e524c7652a478a33eec9d1b51fa, type: 2}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 1246858383493802581, guid: ce68bd28aab2a184388e7173705c5a59, type: 3}
