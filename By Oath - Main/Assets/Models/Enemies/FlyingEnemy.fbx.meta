@@ -10,9 +10,44 @@ ModelImporter:
       74: 5763648557000953355
     second: FlyingAttack
   - first:
-      74: -1577650151139153002
-    second: FlyingDefaultPose
-  externalObjects: {}
+      74: 1548905700537230140
+    second: FlyingDeath
+  - first:
+      74: 9217558499814342554
+    second: FlyingGetHit
+  - first:
+      74: 8257548447963209210
+    second: FlyingEnemyArmature|Flying
+  - first:
+      74: 350238643019354371
+    second: FlyingEnemyArmature|FlyingAttack
+  - first:
+      74: -4480646689089834803
+    second: FlyingEnemyArmature|FlyingDeath
+  - first:
+      74: -4972654527136537670
+    second: FlyingEnemyArmature|FlyingGetHit
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Body1
+    second: {fileID: 2100000, guid: ac05aab5a1c165f4b85c3f5adbde2c0b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Eye1
+    second: {fileID: 2100000, guid: f659dd1ab6e7002468cbea4e49efdc03, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wings1
+    second: {fileID: 2100000, guid: 021895444ccfa4f4f90e27385e2a476b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: talons
+    second: {fileID: 2100000, guid: f114c192f808d5249afc80fe3b692f76, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -81,7 +116,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 1
+      loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -99,11 +134,11 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: FlyingDefaultPose
-      takeName: FlyingDefaultPose
+      name: FlyingDeath
+      takeName: FlyingDeath
       internalID: 0
       firstFrame: 0
-      lastFrame: 1
+      lastFrame: 45
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -111,6 +146,35 @@ ModelImporter:
       loop: 0
       hasAdditiveReferencePose: 0
       loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: FlyingGetHit
+      takeName: FlyingGetHit
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 45
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
