@@ -11,6 +11,7 @@ TagManager:
   - Cross1
   - Cross2
   - Cross3
+  - Terrain
   layers:
   - Default
   - TransparentFX
