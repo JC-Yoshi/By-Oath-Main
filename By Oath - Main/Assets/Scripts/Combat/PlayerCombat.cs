@@ -42,7 +42,7 @@ public class PlayerCombat : MonoBehaviour
     
 
     private AudioSource audSrc;
-    public AudioClip[] attackSounds;
+   // public AudioClip[] attackSounds;
     public AudioClip[] emptySounds;
 
 
@@ -82,7 +82,7 @@ public class PlayerCombat : MonoBehaviour
                     {
                         //play empty ammo sound
                         audSrc.PlayOneShot(emptySounds[Random.Range(0, emptySounds.Length)]);
-                        Debug.Log("Out of ammo");  //will play a ui element telling the player to reload
+                        //Debug.Log("Out of ammo");  //will play a ui element telling the player to reload
                     }
                 }
 
@@ -113,7 +113,7 @@ public class PlayerCombat : MonoBehaviour
         amoCount--;
         holyMeter.SetWater(amoCount);//calling UI scripts
         // play attack sound
-        audSrc.PlayOneShot(attackSounds[Random.Range(0, attackSounds.Length)]);
+       // audSrc.PlayOneShot(attackSounds[Random.Range(0, attackSounds.Length)]);
 
 
         //detect enemies in range

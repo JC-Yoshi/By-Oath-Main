@@ -177,7 +177,14 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events:
-      - time: 0.48952118
+      - time: 0.4606299
+        functionName: play_Attacksound
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: dfac8783aa9938d4bb772ed0c1347e90, type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.5052692
         functionName: Anim_Spray
         data: 
         objectReferenceParameter: {fileID: 11500000, guid: 729bbc67c64c46648bd4d1b92c8c0433, type: 3}
@@ -427,7 +434,7 @@ ModelImporter:
       maskType: 3
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
-    isReadable: 0
+    isReadable: 1
   meshes:
     lODScreenPercentages: []
     globalScale: 1
