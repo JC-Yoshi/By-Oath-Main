@@ -633,7 +633,7 @@ MonoBehaviour:
   jumpCooldown: 0
   airMultiplier: 0
   animator: {fileID: 0}
-  jumpKey: 32
+  jumpKey: 325
   playerHeight: 2
   whatIsGround:
     serializedVersion: 2
