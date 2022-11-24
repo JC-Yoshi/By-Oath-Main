@@ -44,6 +44,15 @@ public class Enemy : MonoBehaviour
             GetComponent<EnemyMove>().enabled = true;
         }
 
+
+        if (currentHealth <= 0)//if health is less then or equal to 0 call die
+        {
+            animator.SetTrigger("Death");
+
+            EnemyDie();
+            //death animation
+        }
+
     }
 
     public void Attack()
@@ -86,9 +95,10 @@ public class Enemy : MonoBehaviour
 
         if (currentHealth <= 0)//if health is less then or equal to 0 call die
         {
+          animator.SetTrigger("Death");
+
             EnemyDie();
             //death animation
-        animator.SetTrigger("Death");
         }
     }
 
@@ -107,7 +117,7 @@ public class Enemy : MonoBehaviour
 
         this.enabled = false;
 
-        Destroy(gameObject);
+        Destroy(gameObject);//play the particale effect, diasable the model/mesh
 
     }
     public void Spawn()
