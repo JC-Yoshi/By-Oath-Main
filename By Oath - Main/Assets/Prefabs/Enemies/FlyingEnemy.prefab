@@ -1011,7 +1011,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 7ad76dce8c03ea74495d3db0621c0a9f, type: 3}
   isAlive: 1
   animator: {fileID: 5274693512673056356}
-  GetHitFlare: {fileID: 0}
+  GetHitFlare: {fileID: 4369360570486220821, guid: ecb86f669d956e0489652b0b421ba3ef, type: 3}
 --- !u!114 &1109787054114754606
 MonoBehaviour:
   m_ObjectHideFlags: 0
