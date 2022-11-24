@@ -123,63 +123,82 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1001 &886397203
-PrefabInstance:
+--- !u!1 &494225819
+GameObject:
   m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 7150812616902437221, guid: fa99a8fda5f12ee408f6e8ef291d38ea, type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7150812616902437221, guid: fa99a8fda5f12ee408f6e8ef291d38ea, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -414.52914
-      objectReference: {fileID: 0}
-    - target: {fileID: 7150812616902437221, guid: fa99a8fda5f12ee408f6e8ef291d38ea, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -1.2276937
-      objectReference: {fileID: 0}
-    - target: {fileID: 7150812616902437221, guid: fa99a8fda5f12ee408f6e8ef291d38ea, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -430.81216
-      objectReference: {fileID: 0}
-    - target: {fileID: 7150812616902437221, guid: fa99a8fda5f12ee408f6e8ef291d38ea, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7150812616902437221, guid: fa99a8fda5f12ee408f6e8ef291d38ea, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7150812616902437221, guid: fa99a8fda5f12ee408f6e8ef291d38ea, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7150812616902437221, guid: fa99a8fda5f12ee408f6e8ef291d38ea, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7150812616902437221, guid: fa99a8fda5f12ee408f6e8ef291d38ea, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7150812616902437221, guid: fa99a8fda5f12ee408f6e8ef291d38ea, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7150812616902437221, guid: fa99a8fda5f12ee408f6e8ef291d38ea, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7150812616902437225, guid: fa99a8fda5f12ee408f6e8ef291d38ea, type: 3}
-      propertyPath: m_Name
-      value: Terrain
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: fa99a8fda5f12ee408f6e8ef291d38ea, type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 494225822}
+  - component: {fileID: 494225821}
+  - component: {fileID: 494225820}
+  m_Layer: 0
+  m_Name: Terrain
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!154 &494225820
+TerrainCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 494225819}
+  m_Material: {fileID: 0}
+  m_Enabled: 1
+  m_TerrainData: {fileID: 15600000, guid: b6f5876e573e45a4abf5c5bc2ac01d51, type: 2}
+  m_EnableTreeColliders: 1
+--- !u!218 &494225821
+Terrain:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 494225819}
+  m_Enabled: 1
+  serializedVersion: 6
+  m_TerrainData: {fileID: 15600000, guid: b6f5876e573e45a4abf5c5bc2ac01d51, type: 2}
+  m_TreeDistance: 5000
+  m_TreeBillboardDistance: 50
+  m_TreeCrossFadeLength: 5
+  m_TreeMaximumFullLODCount: 50
+  m_DetailObjectDistance: 80
+  m_DetailObjectDensity: 1
+  m_HeightmapPixelError: 5
+  m_SplatMapDistance: 1000
+  m_HeightmapMaximumLOD: 0
+  m_ShadowCastingMode: 2
+  m_DrawHeightmap: 1
+  m_DrawInstanced: 0
+  m_DrawTreesAndFoliage: 1
+  m_ReflectionProbeUsage: 1
+  m_MaterialTemplate: {fileID: 2100000, guid: 22ff8771d87ef27429e670136399094b, type: 2}
+  m_BakeLightProbesForTrees: 1
+  m_PreserveTreePrototypeLayers: 0
+  m_DeringLightProbesForTrees: 1
+  m_ScaleInLightmap: 0.0256
+  m_LightmapParameters: {fileID: 15203, guid: 0000000000000000f000000000000000, type: 0}
+  m_GroupingID: 0
+  m_RenderingLayerMask: 257
+  m_AllowAutoConnect: 1
+--- !u!4 &494225822
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 494225819}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1050404465
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -323,7 +342,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1843903188
 MonoBehaviour:
@@ -448,7 +467,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 928073320464936467, guid: 4c91f2b5655e3cd459a357bc4585ed04, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 928073320464936467, guid: 4c91f2b5655e3cd459a357bc4585ed04, type: 3}
       propertyPath: m_LocalPosition.x
@@ -505,7 +524,7 @@ PrefabInstance:
     - target: {fileID: 928073320464936476, guid: 4c91f2b5655e3cd459a357bc4585ed04, type: 3}
       propertyPath: sharedProfile
       value: 
-      objectReference: {fileID: 11400000, guid: f2272d85362bb0c4290c65e05eb5e8b1, type: 2}
+      objectReference: {fileID: 11400000, guid: a12d08df6832ad04d88e5f419fc1f612, type: 2}
     - target: {fileID: 928073320464936477, guid: 4c91f2b5655e3cd459a357bc4585ed04, type: 3}
       propertyPath: m_Name
       value: Sky and Fog Volume_001
