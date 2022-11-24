@@ -13,6 +13,7 @@ public class Enemy : MonoBehaviour
     float nextAttackTime = 0f;//how long till the next attack
     public LayerMask playerLayer;// defines what the player is
     public AudioClip[] attackClips;
+    
     private AudioSource audSrc;
     public bool isAlive = true;
 
@@ -86,6 +87,8 @@ public class Enemy : MonoBehaviour
     {
         isAlive = false;
         Debug.Log("Enemy Died");
+
+        //play death sound
         
         //dissable the enemy
 
