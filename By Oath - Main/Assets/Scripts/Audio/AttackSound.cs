@@ -11,8 +11,9 @@ public class AttackSound : MonoBehaviour
 
     void Start()
     {
-        // get reference to things
-        audSrc = GameObject.Find("PA_HandsByOath").GetComponent<AudioSource>();
+        // get reference to audiosource game component
+        audSrc = GetComponent<AudioSource>();
+        //GameObject.Find("PA_HandsByOath").GetComponent<AudioSource>();
     }
 
     public void play_Attacksound()

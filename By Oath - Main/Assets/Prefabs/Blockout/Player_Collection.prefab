@@ -633,7 +633,7 @@ MonoBehaviour:
   jumpCooldown: 0
   airMultiplier: 0
   animator: {fileID: 0}
-  jumpKey: 32
+  jumpKey: 325
   playerHeight: 2
   whatIsGround:
     serializedVersion: 2
@@ -653,12 +653,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
   attackPoint: {fileID: 1730563823957142324}
-  mainAttackRange: 0.5
+  mainAttackRange: 1.7
   mainAttackDamage: 35
   seccondAttackDamage: 7
-  seccondAttackRange: 1.68
-  holyMeter: {fileID: 0}
-  healthBar: {fileID: 0}
+  seccondAttackRange: 1.7
+  holyMeter: {fileID: 4288061164835716232}
+  healthBar: {fileID: 4288061164871930408}
   pauseMenu: {fileID: 0}
   optionsMenu: {fileID: 0}
   minionLayers:
@@ -670,7 +670,6 @@ MonoBehaviour:
   amoCountMax: 5
   maxHealth: 15
   currentHealth: 1
-  attackSounds: []
   emptySounds:
   - {fileID: 8300000, guid: 48765788b419d1c4aaa0a1db241e8783, type: 3}
 --- !u!114 &2326176073913966561
@@ -1090,6 +1089,28 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6878482705204934898, guid: 76b0323e487786a4c8c393753ee59f68, type: 3}
   m_PrefabInstance: {fileID: 3975664748179234344}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &4288061164871930408 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 913710583651683328, guid: 76b0323e487786a4c8c393753ee59f68, type: 3}
+  m_PrefabInstance: {fileID: 3975664748179234344}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e9166530678e774492b76758b652f23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4288061164835716232 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 913710583623852704, guid: 76b0323e487786a4c8c393753ee59f68, type: 3}
+  m_PrefabInstance: {fileID: 3975664748179234344}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c96ce01c1c960e4c9b157bd0b622f17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &5942099752795039143
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1999,6 +2020,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -26.508652
       objectReference: {fileID: 0}
+    - target: {fileID: 7021308675468123244, guid: eb701489861b6044f93b2cacffd854da, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 7078100188661911637, guid: eb701489861b6044f93b2cacffd854da, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 55.94707
@@ -2159,6 +2184,18 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9022396860451589809, guid: eb701489861b6044f93b2cacffd854da, type: 3}
+      propertyPath: audSrc
+      value: 
+      objectReference: {fileID: 2119752421008591621}
+    - target: {fileID: 9022396860451589809, guid: eb701489861b6044f93b2cacffd854da, type: 3}
+      propertyPath: Attacksounds.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9022396860451589809, guid: eb701489861b6044f93b2cacffd854da, type: 3}
+      propertyPath: Attacksounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 9372136521459474f9eb637ee5c79ed1, type: 3}
     - target: {fileID: 9060219077290935004, guid: eb701489861b6044f93b2cacffd854da, type: 3}
       propertyPath: m_Layer
       value: 0
@@ -2168,6 +2205,11 @@ PrefabInstance:
 --- !u!198 &3072917563279590126 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 6250818902873232775, guid: eb701489861b6044f93b2cacffd854da, type: 3}
+  m_PrefabInstance: {fileID: 8942579387142281065}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &2119752421008591621 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 7021308675468123244, guid: eb701489861b6044f93b2cacffd854da, type: 3}
   m_PrefabInstance: {fileID: 8942579387142281065}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &3585790813164096361 stripped

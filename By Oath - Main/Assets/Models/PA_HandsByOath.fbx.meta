@@ -394,6 +394,13 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events:
+      - time: 0.4280953
+        functionName: play_SpecialAttack_sound
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: dfac8783aa9938d4bb772ed0c1347e90, type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       - time: 0.47651005
         functionName: Anim_SpecialSpray
         data: 
