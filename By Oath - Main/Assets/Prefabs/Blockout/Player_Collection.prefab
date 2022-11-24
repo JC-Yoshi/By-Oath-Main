@@ -653,10 +653,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
   attackPoint: {fileID: 1730563823957142324}
-  mainAttackRange: 0.5
+  mainAttackRange: 1.7
   mainAttackDamage: 35
   seccondAttackDamage: 7
-  seccondAttackRange: 1.68
+  seccondAttackRange: 1.7
   holyMeter: {fileID: 4288061164835716232}
   healthBar: {fileID: 4288061164871930408}
   pauseMenu: {fileID: 0}
