@@ -999,10 +999,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 5
-  attackDamage: 0
+  attackDamage: 1
   attackPoint: {fileID: 4468252307822325752}
   attackRange: 0.6
   attackRate: 2
+  staggerTime: 2
   playerLayer:
     serializedVersion: 2
     m_Bits: 8
