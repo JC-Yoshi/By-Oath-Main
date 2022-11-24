@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class Inventory : MonoBehaviour
 {
     public GameObject player;
+    public GameObject Debris;
 
     public Animator animator;
 
@@ -49,6 +50,8 @@ public class Inventory : MonoBehaviour
 
             animator.SetTrigger("CrossPickUp");
             //trigger next wave spawn
+
+            Debris.SetActive(false);
         }
     }
     public void CrossPickup2()
