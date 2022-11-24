@@ -18,7 +18,7 @@ public class ReloadPoint : MonoBehaviour, IInteractable
     public string InteractionPrompt => prompt;
 
     private AudioSource audSrc;
-    [SerializeField] private GameObject fountainWater;
+    [SerializeField] GameObject fountainWater;
 
     void Start()
     {
