@@ -946,7 +946,7 @@ GameObject:
   - component: {fileID: 14022844227023749}
   m_Layer: 7
   m_Name: FlyingEnemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1004,7 +1004,7 @@ MonoBehaviour:
   attackPoint: {fileID: 4468252307822325752}
   attackRange: 0.6
   attackRate: 0.8
-  staggerTime: 4
+  staggerTime: 2
   playerLayer:
     serializedVersion: 2
     m_Bits: 8
@@ -1036,7 +1036,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 7
+  m_Speed: 4
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -1055,7 +1055,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5040108647281676154}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 94b02e524c7652a478a33eec9d1b51fa, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
