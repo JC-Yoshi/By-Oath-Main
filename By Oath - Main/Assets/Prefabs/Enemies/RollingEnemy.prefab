@@ -504,8 +504,9 @@ MonoBehaviour:
   attackClips:
   - {fileID: 8300000, guid: 7ad76dce8c03ea74495d3db0621c0a9f, type: 3}
   isAlive: 1
+  deathDelayTime: 1
   animator: {fileID: 9185729816948904725}
-  GetHitFlare: {fileID: 4622044892526732902}
+  GetHitFlare: {fileID: 4369360570486220821, guid: ecb86f669d956e0489652b0b421ba3ef, type: 3}
   DeathFlare: {fileID: 8557364541068123537}
 --- !u!114 &-4000037579960285521
 MonoBehaviour:
@@ -813,10 +814,5 @@ PrefabInstance:
 --- !u!4 &4622044892526732901 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4369360570486220822, guid: ecb86f669d956e0489652b0b421ba3ef, type: 3}
-  m_PrefabInstance: {fileID: 8973381707300015731}
-  m_PrefabAsset: {fileID: 0}
---- !u!198 &4622044892526732902 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 4369360570486220821, guid: ecb86f669d956e0489652b0b421ba3ef, type: 3}
   m_PrefabInstance: {fileID: 8973381707300015731}
   m_PrefabAsset: {fileID: 0}
