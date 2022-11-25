@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2818635412643390093}
   - component: {fileID: 1203048704110308648}
   - component: {fileID: 3987622073239198178}
+  - component: {fileID: 3376396489430307827}
   m_Layer: 0
   m_Name: Msh_Crypt_3
   m_TagString: Untagged
@@ -81,3 +82,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &3376396489430307827
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3194773239851284535}
+  m_Material: {fileID: 13400000, guid: 94b02e524c7652a478a33eec9d1b51fa, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.4359844, y: 4.5304713, z: 3.7052183}
+  m_Center: {x: 0, y: 2.2603834, z: 0}
