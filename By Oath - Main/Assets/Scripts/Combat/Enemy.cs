@@ -90,6 +90,7 @@ public class Enemy : MonoBehaviour
 
         animator.SetTrigger("GetHit");
         GetHitFlare.Play();
+        
         GetComponent<EnemyMove>().enabled = false;
 
         //play the damaged animation if there is one

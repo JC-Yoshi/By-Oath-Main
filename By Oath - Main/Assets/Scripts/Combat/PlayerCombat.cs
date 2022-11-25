@@ -192,7 +192,7 @@ public class PlayerCombat : MonoBehaviour
 
         if(currentHealth!= maxHealth)
         {
-            currentHealth += halfHealth;//if the player is below half health add half there total health to there current health 
+            currentHealth += 5;//if the player is below half health add half there total health to there current health 
             healthBar.SetMaxHealth(currentHealth);//changes the UI to refflect new health value
         }
     }
