@@ -44,7 +44,7 @@ public class PlayerCombat : MonoBehaviour
     private AudioSource audSrc;
    // public AudioClip[] attackSounds;
     public AudioClip[] emptySounds;
-
+    public AudioClip[] hurtSounds;
 
     private void Start()
     {
@@ -205,6 +205,9 @@ public class PlayerCombat : MonoBehaviour
 
         //play the damaged animation if there is one
         animator.SetTrigger("TakeDamage");
+
+        //play audio of player getting damaged
+        audSrc.PlayOneShot(hurtSounds[Random.Range(0, hurtSounds.Length)]);
 
         healthBar.SetHealth(currentHealth);
         
