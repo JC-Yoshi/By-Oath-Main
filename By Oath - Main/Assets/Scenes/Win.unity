@@ -20706,7 +20706,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 763967577}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.624, y: 4.708, z: 0.008}
+  m_LocalPosition: {x: -5.645, y: 4.708, z: -0.004}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 580570441}
@@ -20732,7 +20732,7 @@ MonoBehaviour:
   m_PointlightHDType: 0
   m_SpotLightShape: 0
   m_AreaLightShape: 0
-  m_Intensity: 19.1
+  m_Intensity: 20.63
   m_EnableSpotReflector: 1
   m_LuxAtDistance: 1
   m_InnerSpotPercent: 0
@@ -20846,8 +20846,8 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 0.5613208, g: 0.8126896, b: 1, a: 1}
-  m_Intensity: 70239.766
-  m_Range: 10
+  m_Intensity: 202842.33
+  m_Range: 42.48
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -35503,7 +35503,7 @@ MonoBehaviour:
   m_PointlightHDType: 1
   m_SpotLightShape: 0
   m_AreaLightShape: 0
-  m_Intensity: 21.1
+  m_Intensity: 21.9
   m_EnableSpotReflector: 1
   m_LuxAtDistance: 1
   m_InnerSpotPercent: 0
@@ -35616,8 +35616,8 @@ Light:
   serializedVersion: 10
   m_Type: 2
   m_Shape: 0
-  m_Color: {r: 0, g: 0.03912449, b: 1, a: 1}
-  m_Intensity: 280959.06
+  m_Color: {r: 0.19842473, g: 0.50596386, b: 0.8584906, a: 1}
+  m_Intensity: 489177.88
   m_Range: 7
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -35660,7 +35660,7 @@ Light:
   m_LightShadowCasterMode: 2
   m_AreaSize: {x: 0.5, y: 0.5}
   m_BounceIntensity: 1
-  m_ColorTemperature: 6570
+  m_ColorTemperature: 7189
   m_UseColorTemperature: 1
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 7}
   m_UseBoundingSphereOverride: 1
@@ -40704,7 +40704,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1569568286
 Transform:
   m_ObjectHideFlags: 0
