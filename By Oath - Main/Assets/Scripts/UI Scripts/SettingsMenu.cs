@@ -6,7 +6,9 @@ using UnityEngine.UI;
 
 public class SettingsMenu : MonoBehaviour
 {
-    public AudioMixer audioMixer;
+    public AudioMixer MasterMixer;
+    public AudioMixer SfxMixer;
+    public AudioMixer MusicMixer;
     Resolution[] resolutions;
 
     private bool isSetYet = false;
@@ -63,10 +65,23 @@ public class SettingsMenu : MonoBehaviour
     }
 
     // This is a function that we use to set the MAIN mixer using the slider provided in game via the UI. 
-    public void SetVolume(float volume)
+    public void SetMasterVolume(float volume)
     {
-        audioMixer.SetFloat("volume", volume);
+        MasterMixer.SetFloat("volume", volume);
     }
+
+
+    public void SetSfxVolume(float volume)
+    {
+        SfxMixer.SetFloat("volume", volume);
+    }
+
+    //set volume for SOUNDTRACK / MUSIC mixer
+    public void SetMusicVolume(float volume)
+    {
+        MusicMixer.SetFloat("volume", volume);
+    }
+
 
     // This is a function that we use to change the quality of resolution in game using the drop down UI. 
     public void SetQuality(int qualityIndex)
