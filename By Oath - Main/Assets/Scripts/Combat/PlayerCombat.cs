@@ -2,13 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.HighDefinition;
+using TMPro;
+
 
 public class PlayerCombat : MonoBehaviour
 {
+    //[SerializeField] private TMP_Text promptAsset;
+    [SerializeField] public GameObject panel;
+
+    [SerializeField] private Volume volume;
+    
     Enemy myEnemy;
     BossBasic bossBasic;
 
       public Animator animator;
+      
 
     
 
@@ -64,6 +74,10 @@ public class PlayerCombat : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(amoCount <= 0)
+        {
+            panel.SetActive(true);
+        }
 
         if (pauseMenu.active == false)
         {
@@ -74,7 +88,7 @@ public class PlayerCombat : MonoBehaviour
                     
                     if (amoCount >= 0)
                     {
-
+                        panel.SetActive(false);
 
                         MainAttack();
                     }
@@ -178,6 +192,9 @@ public class PlayerCombat : MonoBehaviour
 
         Debug.Log("Reloaded");//logs a reload
         amoCount = amoCountMax;//sets current amo = to max amo
+        panel.SetActive(false);
+        
+
 
         animator.SetTrigger("Reload");
         
@@ -197,6 +214,8 @@ public class PlayerCombat : MonoBehaviour
         }
     }
 
+    public float _hurtClearTime = 0.6f;
+    
     public void PlayerTakeDamage(int Damage)
     {
 
@@ -211,6 +230,9 @@ public class PlayerCombat : MonoBehaviour
 
         healthBar.SetHealth(currentHealth);
         
+        volume.weight = 1;
+        StartCoroutine(Clear());
+        
 
         if (currentHealth <= 0)//if health is less then or equal to 0 call die
         {
@@ -218,6 +240,13 @@ public class PlayerCombat : MonoBehaviour
         }
 
         
+    }
+
+      IEnumerator Clear()
+    {
+        yield return new WaitForSeconds(_hurtClearTime);
+
+        volume.weight = 0;
     }
 
     void PlayerDie()//die function 
@@ -231,7 +260,7 @@ public class PlayerCombat : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;//unlocks the cursor to the center of the screen
         Cursor.visible = true;//make the mouse visable 
 
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene(3);
 
     }
 
@@ -248,4 +277,6 @@ public class PlayerCombat : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(attackPoint.position, seccondAttackRange);
     }
+
+  
 }
