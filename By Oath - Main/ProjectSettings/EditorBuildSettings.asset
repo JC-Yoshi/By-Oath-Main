@@ -12,6 +12,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Graveyard_Arena.unity
     guid: a5e245ad869bffd408c0fc95bc5bf152
   - enabled: 1
+    path: Assets/Scenes/Win.unity
+    guid: a7ee537fc89f3734385de1f3b87ba6b6
+  - enabled: 1
+    path: Assets/Scenes/Death.unity
+    guid: dc4e2abc70dbe384f81c1b8c427e7539
+  - enabled: 1
     path: Assets/Scenes/Credits.unity
     guid: a1f0c5fee08d09e41b357cb9cb908492
   m_configObjects: {}

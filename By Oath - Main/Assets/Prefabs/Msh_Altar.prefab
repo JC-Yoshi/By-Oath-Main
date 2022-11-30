@@ -95,8 +95,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9da98f83d7688e0408bf383a14867199, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bOSS: {fileID: 0}
-  prompt: 
+  bOSS: {fileID: 1625589744799970459, guid: 9d712129a1d5eb748870b9a087efe4ea, type: 3}
+  prompt: Victory Royale
 --- !u!65 &4868939987008839102
 BoxCollider:
   m_ObjectHideFlags: 0
