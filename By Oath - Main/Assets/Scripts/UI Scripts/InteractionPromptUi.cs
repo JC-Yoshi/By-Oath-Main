@@ -13,7 +13,7 @@ public class InteractionPromptUi : MonoBehaviour
 
     void Start()
     {
-        //_uiPanel.SetActive(false);
+        _uiPanel.SetActive(false);
     }
 
    

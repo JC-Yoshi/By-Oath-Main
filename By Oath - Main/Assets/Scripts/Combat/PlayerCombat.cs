@@ -2,13 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.HighDefinition;
+
 
 public class PlayerCombat : MonoBehaviour
 {
+    [SerializeField] private InteractionPromptUi _interactionPromptUi;
+    [SerializeField] private string prompt;
+    public string InteractionPrompt => prompt;
+
+    public Volume volume;
+
+
+    [SerializeField] private Interactor _interactor;
+
+    
     Enemy myEnemy;
     BossBasic bossBasic;
 
       public Animator animator;
+      
 
     
 
@@ -64,9 +78,11 @@ public class PlayerCombat : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(amoCount <= 0 )
+        if(amoCount <= 0)
         {
             //call UI element 
+            _interactionPromptUi.SetUp(prompt);
+        
         }
 
         if (pauseMenu.active == false)
@@ -204,6 +220,8 @@ public class PlayerCombat : MonoBehaviour
         }
     }
 
+    public float _hurtClearTime = 0.6f;
+    
     public void PlayerTakeDamage(int Damage)
     {
 
@@ -215,6 +233,9 @@ public class PlayerCombat : MonoBehaviour
 
         healthBar.SetHealth(currentHealth);
         
+        volume.weight = 1;
+        StartCoroutine(Clear());
+        
 
         if (currentHealth <= 0)//if health is less then or equal to 0 call die
         {
@@ -222,6 +243,13 @@ public class PlayerCombat : MonoBehaviour
         }
 
         
+    }
+
+      IEnumerator Clear()
+    {
+        yield return new WaitForSeconds(_hurtClearTime);
+
+        volume.weight = 0;
     }
 
     void PlayerDie()//die function 
@@ -252,4 +280,6 @@ public class PlayerCombat : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(attackPoint.position, seccondAttackRange);
     }
+
+  
 }
