@@ -671,6 +671,10 @@ MonoBehaviour:
   currentHealth: 1
   emptySounds:
   - {fileID: 8300000, guid: 48765788b419d1c4aaa0a1db241e8783, type: 3}
+  hurtSounds:
+  - {fileID: 8300000, guid: 97c1110b135504b44978e51ad80e0bcb, type: 3}
+  - {fileID: 8300000, guid: 99ad9ff7e0418994f813ce4b498557d7, type: 3}
+  - {fileID: 8300000, guid: 26e2cb8c8490bd94ebca936d4c87689d, type: 3}
 --- !u!114 &2326176073913966561
 MonoBehaviour:
   m_ObjectHideFlags: 0
