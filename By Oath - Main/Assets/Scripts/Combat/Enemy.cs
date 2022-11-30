@@ -14,15 +14,16 @@ public class Enemy : MonoBehaviour
     public float staggerTime = 2f; //how long the enemy is staggered after a hit
     public LayerMask playerLayer;// defines what the player is
     public AudioClip[] attackClips;
-    
+
     private AudioSource audSrc;
     public bool isAlive = true;
 
-    
+    public float deathDelayTime = 1f;
 
     PlayerCombat playerCombat;
     public Animator animator;
     public ParticleSystem GetHitFlare;
+    public ParticleSystem DeathFlare;
 
     void Start()
     {
@@ -80,7 +81,7 @@ public class Enemy : MonoBehaviour
             playerCombat = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerCombat>();//allows this script to accsess the playerCombat script
             playerCombat.PlayerTakeDamage(attackDamage);
         }
-        
+
     }
 
     public void EnemyTakeDamage(int Damage)
@@ -90,15 +91,15 @@ public class Enemy : MonoBehaviour
 
         animator.SetTrigger("GetHit");
         GetHitFlare.Play();
-        
+
         GetComponent<EnemyMove>().enabled = false;
 
         //play the damaged animation if there is one
 
         if (currentHealth <= 0)//if health is less then or equal to 0 call die
         {
-          animator.SetTrigger("Death");
-
+            animator.SetTrigger("Death");
+            deathDelayTime = Time.time + deathDelayTime;
             EnemyDie();
             //death animation
         }
@@ -110,18 +111,25 @@ public class Enemy : MonoBehaviour
         Debug.Log("Enemy Died");
 
         //play death sound
-        
+
         //dissable the enemy
 
 
         GetComponent<EnemyMove>().enabled = false;
         GetComponent<Collider>().enabled = false;
 
+        DeathFlare.Play();
 
 
-        this.enabled = false;
 
-        Destroy(gameObject);//play the particale effect, diasable the model/mesh
+        if (Time.time > deathDelayTime)
+        {
+            this.enabled = false;//needs a delay 
+
+
+            Destroy(gameObject);//play the particale effect, diasable the model/mesh
+        }
+
 
     }
     public void Spawn()
