@@ -64,6 +64,10 @@ public class PlayerCombat : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(amoCount <= 0 )
+        {
+            //call UI element 
+        }
 
         if (pauseMenu.active == false)
         {
@@ -178,6 +182,9 @@ public class PlayerCombat : MonoBehaviour
 
         Debug.Log("Reloaded");//logs a reload
         amoCount = amoCountMax;//sets current amo = to max amo
+
+        
+
 
         animator.SetTrigger("Reload");
         
