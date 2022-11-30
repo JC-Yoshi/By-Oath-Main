@@ -502,7 +502,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   attackClips:
-  - {fileID: 8300000, guid: 7ad76dce8c03ea74495d3db0621c0a9f, type: 3}
+  - {fileID: 8300000, guid: f0a3ca0379f24674091b07fa5583ee57, type: 3}
   isAlive: 1
   deathDelayTime: 1
   animator: {fileID: 9185729816948904725}
