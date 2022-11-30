@@ -108,7 +108,7 @@ public class Enemy : MonoBehaviour
     void EnemyDie()//die function 
     {
         isAlive = false;
-        Debug.Log("Enemy Died");
+       // Debug.Log("Enemy Died");
 
         //play death sound
 

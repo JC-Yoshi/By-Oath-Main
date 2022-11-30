@@ -129,11 +129,6 @@ AudioMixerController:
   m_AudioMixerGroupViews:
   - guids:
     - 003194a402ef27344932bbfa8f1a8950
-    - eee18a9bdfd532747bb206fd9fac0674
-    - d348301c906110640982a54f9455345c
-    - f888770afbd5877499ccf845f53cb26e
-    - 512eb80cb7e10524dbb09ac043fbd4e3
-    - 8afe28dc1f669d247886a515df948c64
     name: View
   m_CurrentViewIndex: 0
   m_TargetSnapshot: {fileID: 24500006}
@@ -146,12 +141,7 @@ AudioMixerGroupController:
   m_Name: Master
   m_AudioMixer: {fileID: 24100000}
   m_GroupID: 003194a402ef27344932bbfa8f1a8950
-  m_Children:
-  - {fileID: 8654795249957908573}
-  - {fileID: 46619714985848655}
-  - {fileID: -1114098589315653756}
-  - {fileID: -4860156762830161678}
-  - {fileID: 2094682973352308240}
+  m_Children: []
   m_Volume: 13b9cdd9a49851640b404daafa877944
   m_Pitch: 2bca1dade7d166e49a6758da047029b5
   m_Send: 00000000000000000000000000000000
