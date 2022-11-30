@@ -4,19 +4,15 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.HighDefinition;
+using TMPro;
 
 
 public class PlayerCombat : MonoBehaviour
 {
-    [SerializeField] private InteractionPromptUi _interactionPromptUi;
-    [SerializeField] private string prompt;
-    public string InteractionPrompt => prompt;
+    //[SerializeField] private TMP_Text promptAsset;
+    [SerializeField] public GameObject panel;
 
-    public Volume volume;
-
-
-    [SerializeField] private Interactor _interactor;
-
+    [SerializeField] private Volume volume;
     
     Enemy myEnemy;
     BossBasic bossBasic;
@@ -80,9 +76,7 @@ public class PlayerCombat : MonoBehaviour
     {
         if(amoCount <= 0)
         {
-            //call UI element 
-            _interactionPromptUi.SetUp(prompt);
-        
+            panel.SetActive(true);
         }
 
         if (pauseMenu.active == false)
@@ -94,7 +88,7 @@ public class PlayerCombat : MonoBehaviour
                     
                     if (amoCount >= 0)
                     {
-
+                        panel.SetActive(false);
 
                         MainAttack();
                     }
@@ -198,7 +192,7 @@ public class PlayerCombat : MonoBehaviour
 
         Debug.Log("Reloaded");//logs a reload
         amoCount = amoCountMax;//sets current amo = to max amo
-
+        panel.SetActive(false);
         
 
 
@@ -263,7 +257,7 @@ public class PlayerCombat : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;//unlocks the cursor to the center of the screen
         Cursor.visible = true;//make the mouse visable 
 
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene(3);
 
     }
 

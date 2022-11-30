@@ -10,6 +10,7 @@ public class Interactor : MonoBehaviour
      public LayerMask interaractionLayerMask;
     [SerializeField] private InteractionPromptUi _interactionPromptUi;
 
+
     private readonly Collider[] colliders = new Collider[6];//how many interactables are there 
 
      public int numFound;
