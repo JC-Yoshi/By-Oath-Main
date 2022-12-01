@@ -3,21 +3,26 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class MainMenu : MonoBehaviour
+public class EndScreen : MonoBehaviour
 {
-    public void Start()
+    void Start()
     {
         Time.timeScale = 1f;
-        
-    }
-    public void PlayGame()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
-    public void CreditScene()
+    public void Restart()
+    {
+        SceneManager.LoadScene(1);
+    }
+
+    public void Credits()
     {
         SceneManager.LoadScene(4);
+    }
+
+    public void MainMenu()
+    {
+        SceneManager.LoadScene(0);
     }
 
     public void QuitGame()
