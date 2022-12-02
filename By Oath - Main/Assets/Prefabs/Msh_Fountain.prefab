@@ -316,7 +316,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isActive: 1
   reloadRate: 3
-  prompt: 
+  prompt: Press E to Refresh Weapon
   fountainWater: {fileID: 5268518238265952270}
 --- !u!82 &4302604233186898045
 AudioSource:
