@@ -650,6 +650,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f197a269f9ce7a4ba23f478f1553f98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  panel: {fileID: 0}
+  volume: {fileID: 0}
   animator: {fileID: 0}
   attackPoint: {fileID: 1730563823957142324}
   mainAttackRange: 1.7
@@ -675,6 +677,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 97c1110b135504b44978e51ad80e0bcb, type: 3}
   - {fileID: 8300000, guid: 99ad9ff7e0418994f813ce4b498557d7, type: 3}
   - {fileID: 8300000, guid: 26e2cb8c8490bd94ebca936d4c87689d, type: 3}
+  _hurtClearTime: 0.6
 --- !u!114 &2326176073913966561
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -705,6 +708,7 @@ MonoBehaviour:
   interaractionLayerMask:
     serializedVersion: 2
     m_Bits: 512
+  _interactionPromptUi: {fileID: 0}
   numFound: 0
 --- !u!95 &4414557744270241855
 Animator:
@@ -993,6 +997,10 @@ PrefabInstance:
     - target: {fileID: 6878482705204934894, guid: 76b0323e487786a4c8c393753ee59f68, type: 3}
       propertyPath: m_Name
       value: UI HUD
+      objectReference: {fileID: 0}
+    - target: {fileID: 6878482705204934894, guid: 76b0323e487786a4c8c393753ee59f68, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6878482705204934898, guid: 76b0323e487786a4c8c393753ee59f68, type: 3}
       propertyPath: m_Pivot.x
