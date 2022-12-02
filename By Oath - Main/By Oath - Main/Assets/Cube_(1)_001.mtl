@@ -1,0 +1,9 @@
+newmtl MAT_Stone_[ath
+map_Kd TilePlane_Cobble_MAT_BaseMap.tga
+Kd 1 1 1
+d 1
+
+newmtl New_Material
+Kd 0.2591014 0.6132076 0.2516465
+d 1
+

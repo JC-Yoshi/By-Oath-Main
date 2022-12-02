@@ -6,7 +6,7 @@ using System;
 // Spawn Enemy with a nice Dissolve Effect
 public class EnemySpawn : MonoBehaviour
 {
-    public event EventHandler OnDead;
+  //  public event EventHandler OnDead;
     //private EnemyMain enemyMain;
 
     private void Awake()

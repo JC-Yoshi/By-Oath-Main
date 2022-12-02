@@ -6,6 +6,12 @@ using UnityEngine.UI;
 
 public class Inventory : MonoBehaviour
 {
+    public GameObject player;
+    public GameObject Debris;
+
+    public Animator animator;
+
+    [Header("UI Elements")]
     public bool cross1;
     public bool cross2;
     public bool cross3;
@@ -17,9 +23,10 @@ public class Inventory : MonoBehaviour
     public Image Cross1;//the image for each cross
     public Image Cross2;
     public Image Cross3;
-
+    [Header("Waves")]
     public GameObject wave1;
     public GameObject wave2;
+    public GameObject wave3;
 
     // Start is called before the first frame update
     void Start()
@@ -39,8 +46,12 @@ public class Inventory : MonoBehaviour
         {
             wave1.GetComponent<Wave>().enabled = true;
 
+            player.GetComponent<PlayerCombat>().Heal();//heal the player
 
+            animator.SetTrigger("CrossPickUp");
             //trigger next wave spawn
+
+            Debris.SetActive(false);
         }
     }
     public void CrossPickup2()
@@ -52,6 +63,10 @@ public class Inventory : MonoBehaviour
 
 
             wave2.GetComponent<Wave>().enabled = true;
+
+            player.GetComponent<PlayerCombat>().Heal();//heal the player 
+
+            animator.SetTrigger("CrossPickUp");
             //trigger next wave spawn
         }
     }
@@ -62,8 +77,14 @@ public class Inventory : MonoBehaviour
 
         if (cross3 == true)
         {
-           
+            wave3.GetComponent<Wave>().enabled = true;
+
+            player.GetComponent<PlayerCombat>().Heal();//heal the player 
+
+            animator.SetTrigger("CrossPickUp");
+
             //trigger wave spawn 
+
         }
 
     }

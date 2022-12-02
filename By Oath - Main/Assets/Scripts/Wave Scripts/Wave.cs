@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Wave : MonoBehaviour
 {
+
+    public GameObject nextCross;
+
     private enum State
     {
         Idle,
@@ -13,8 +16,10 @@ public class Wave : MonoBehaviour
 
     [SerializeField] private ColliderTrigger colliderTrigger;
     [SerializeField] private EnemyGroup[] enemyGroups;
+    private AudioSource audSrc;
+    [SerializeField] private AudioClip[] bellSounds;
 
-   
+
     private State state;
 
     private void Awake()
@@ -25,6 +30,8 @@ public class Wave : MonoBehaviour
     private void Start()
     {
         //colliderTrigger.OnPlayerEnterTrigger += ColliderTrigger_OnPlayerEnterTrigger;
+        audSrc = GameObject.Find("BellSoundHolder").GetComponent<AudioSource>();
+        
     }
 
     private void ColliderTrigger_OnPlayerEnterTrigger(object sender, System.EventArgs e)
@@ -65,7 +72,12 @@ public class Wave : MonoBehaviour
             {
                 // Battle is over!
                 state = State.BattleOver;
-                Debug.Log("Battle is Over!");
+                audSrc.PlayOneShot(bellSounds[Random.Range(0, bellSounds.Length)]);
+
+                Debug.Log("Battle is Over!"); //trigger next cross spawn 
+
+                // wave is over
+                nextCross.active = true;
             }
         }
     }
@@ -76,6 +88,7 @@ public class Wave : MonoBehaviour
             if (group.IsGroupDead())
             {
                 // wave is over
+               // nextCross.active = true;
             }
             else
             {
