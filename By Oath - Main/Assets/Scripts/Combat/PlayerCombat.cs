@@ -10,6 +10,7 @@ using TMPro;
 public class PlayerCombat : MonoBehaviour
 {
     //[SerializeField] private TMP_Text promptAsset;
+
     [SerializeField] public GameObject panel;
 
     [SerializeField] private Volume volume;
@@ -18,9 +19,6 @@ public class PlayerCombat : MonoBehaviour
     BossBasic bossBasic;
 
       public Animator animator;
-      
-
-    
 
     public Transform attackPoint; // The point from which the wepons range is calculated
     [Header("Main Attack")]
@@ -129,7 +127,6 @@ public class PlayerCombat : MonoBehaviour
         // play attack sound
        // audSrc.PlayOneShot(attackSounds[Random.Range(0, attackSounds.Length)]);
 
-
         //detect enemies in range
         Collider[] hitEnemies = Physics.OverlapSphere(attackPoint.position, mainAttackRange, minionLayers);
 
@@ -143,16 +140,18 @@ public class PlayerCombat : MonoBehaviour
 
         }
 
-        Collider[] hitBoss = Physics.OverlapSphere(attackPoint.position, mainAttackRange, bossLayer);//detects any hit bosses
+        /*Collider[] hitBoss = Physics.OverlapSphere(attackPoint.position, mainAttackRange, bossLayer);//detects any hit bosses
 
         foreach (Collider boss in hitBoss)//loops over hit bosses
         {
             Debug.Log("Hit" + boss.name);
             boss.GetComponent<BossBasic>().BossTakeDamage(mainAttackDamage);//damages the boss
 
-        }
+        }*/
         
     }
+
+   
 
     void SecondAttack()//seccondary attack, right mouse click
     {
@@ -176,7 +175,7 @@ public class PlayerCombat : MonoBehaviour
             enemy.GetComponent<Enemy>().EnemyTakeDamage(seccondAttackDamage);//calls the enemy script and allows damage to be done 
         }
 
-        Collider[] hitBoss = Physics.OverlapSphere(attackPoint.position, seccondAttackRange, bossLayer);//detects any hit bosses
+        /*Collider[] hitBoss = Physics.OverlapSphere(attackPoint.position, seccondAttackRange, bossLayer);//detects any hit bosses
 
         //damage them
         foreach (Collider boss in hitBoss)//loops over hit bosses
@@ -184,7 +183,7 @@ public class PlayerCombat : MonoBehaviour
             //damage the enemies
             Debug.Log("Hit" + boss.name);
             boss.GetComponent<BossBasic>().BossTakeDamage(seccondAttackDamage);//damages the boss
-        }
+        }*/
     }
 
     public void Reload()
